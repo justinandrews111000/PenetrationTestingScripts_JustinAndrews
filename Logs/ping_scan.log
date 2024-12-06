@@ -1,0 +1,93 @@
+
+Log started on 2024-11-19 17:30:31.751594
+════════════════════════════════════════════════════════════════════════════════
+Starting Network Scan: 192.168.0.0/24
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-19 17:30:07] Starting network scan with 10 threads
+[SUCCESS] [2024-11-19 17:30:31] 
+Scan Results Summary
+[SUCCESS] [2024-11-19 17:30:31] ==================================================
+[SUCCESS] [2024-11-19 17:30:31] Total Hosts Scanned: 254
+[SUCCESS] [2024-11-19 17:30:31] Hosts Up: 7
+[SUCCESS] [2024-11-19 17:30:31] Hosts Down: 247
+[SUCCESS] [2024-11-19 17:30:31] 
+Responding Hosts:
+[SUCCESS] [2024-11-19 17:30:31] --------------------
+[SUCCESS] [2024-11-19 17:30:31]   - 192.168.0.1
+[SUCCESS] [2024-11-19 17:30:31]   - 192.168.0.102
+[SUCCESS] [2024-11-19 17:30:31]   - 192.168.0.112
+[SUCCESS] [2024-11-19 17:30:31]   - 192.168.0.153
+[SUCCESS] [2024-11-19 17:30:31]   - 192.168.0.176
+[SUCCESS] [2024-11-19 17:30:31]   - 192.168.0.218
+[SUCCESS] [2024-11-19 17:30:31]   - 192.168.0.250
+
+Log started on 2024-11-19 17:31:09.759163
+════════════════════════════════════════════════════════════════════════════════
+Starting Network Scan: 192.168.0.0/24
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-19 17:30:44] Starting network scan with 10 threads
+[SUCCESS] [2024-11-19 17:31:09] 
+Scan Results Summary
+[SUCCESS] [2024-11-19 17:31:09] ==================================================
+[SUCCESS] [2024-11-19 17:31:09] Total Hosts Scanned: 254
+[SUCCESS] [2024-11-19 17:31:09] Hosts Up: 7
+[SUCCESS] [2024-11-19 17:31:09] Hosts Down: 247
+[SUCCESS] [2024-11-19 17:31:09] 
+Responding Hosts:
+[SUCCESS] [2024-11-19 17:31:09] --------------------
+[SUCCESS] [2024-11-19 17:31:09]   - 192.168.0.1
+[SUCCESS] [2024-11-19 17:31:09]     Response: Pinging 192.168.0.1 with 32 bytes of data:
+Reply from 192.168.0.1: bytes=32 time=3ms TTL=64
+
+Ping statistics for 192.168.0.1:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 3ms, Maximum = 3ms, Average = 3ms
+[SUCCESS] [2024-11-19 17:31:09]   - 192.168.0.102
+[SUCCESS] [2024-11-19 17:31:09]     Response: Pinging 192.168.0.102 with 32 bytes of data:
+Reply from 192.168.0.102: bytes=32 time<1ms TTL=128
+
+Ping statistics for 192.168.0.102:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+[SUCCESS] [2024-11-19 17:31:09]   - 192.168.0.112
+[SUCCESS] [2024-11-19 17:31:09]     Response: Pinging 192.168.0.112 with 32 bytes of data:
+Reply from 192.168.0.112: bytes=32 time=4ms TTL=64
+
+Ping statistics for 192.168.0.112:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 4ms, Maximum = 4ms, Average = 4ms
+[SUCCESS] [2024-11-19 17:31:09]   - 192.168.0.153
+[SUCCESS] [2024-11-19 17:31:09]     Response: Pinging 192.168.0.153 with 32 bytes of data:
+Reply from 192.168.0.153: bytes=32 time=19ms TTL=255
+
+Ping statistics for 192.168.0.153:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 19ms, Maximum = 19ms, Average = 19ms
+[SUCCESS] [2024-11-19 17:31:09]   - 192.168.0.176
+[SUCCESS] [2024-11-19 17:31:09]     Response: Pinging 192.168.0.176 with 32 bytes of data:
+Reply from 192.168.0.176: bytes=32 time=8ms TTL=64
+
+Ping statistics for 192.168.0.176:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 8ms, Maximum = 8ms, Average = 8ms
+[SUCCESS] [2024-11-19 17:31:09]   - 192.168.0.218
+[SUCCESS] [2024-11-19 17:31:09]     Response: Pinging 192.168.0.218 with 32 bytes of data:
+Reply from 192.168.0.218: bytes=32 time=73ms TTL=64
+
+Ping statistics for 192.168.0.218:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 73ms, Maximum = 73ms, Average = 73ms
+[SUCCESS] [2024-11-19 17:31:09]   - 192.168.0.250
+[SUCCESS] [2024-11-19 17:31:09]     Response: Pinging 192.168.0.250 with 32 bytes of data:
+Reply from 192.168.0.250: bytes=32 time=8ms TTL=64
+
+Ping statistics for 192.168.0.250:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 8ms, Maximum = 8ms, Average = 8ms

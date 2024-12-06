@@ -1,0 +1,459 @@
+
+══════════════════════════════════════════════════START══════════════════════════════════════════════════
+Log started on 2024-11-17 20:16:59.431700
+
+════════════════════════════════════════════════════════════════════════════════
+Starting Zone Transfer: zonetransfer.me from nsztm1.digi.ninja
+────────────────────────────────────────────────────────────────────────────────
+[DEBUG] [2024-11-17 20:16:59] Executing nslookup commands:
+server nsztm1.digi.ninja
+set q=AXFR
+set type=any
+set class=any
+ls -d zonetransfer.me
+exit
+[INFO] [2024-11-17 20:16:59] Default Server:  UnKnown
+Address:  11.22.5.129
+
+> Default Server:  nsztm1.digi.ninja
+Address:  81.4.108.41
+
+> > > > [nsztm1.digi.ninja]
+ zonetransfer.me.               SOA    nsztm1.digi.ninja robin.digi.ninja. (2019100801 172800 900 1209600 3600)
+ zonetransfer.me.               TXT   		"google-site-verification=tyP28J7JAUHA9fw2sHXMgcCC0I6XBmmoVi04VlMewxA"
+
+ zonetransfer.me.               MX     0    ASPMX.L.GOOGLE.COM
+ zonetransfer.me.               MX     10   ALT1.ASPMX.L.GOOGLE.COM
+ zonetransfer.me.               MX     10   ALT2.ASPMX.L.GOOGLE.COM
+ zonetransfer.me.               MX     20   ASPMX2.GOOGLEMAIL.COM
+ zonetransfer.me.               MX     20   ASPMX3.GOOGLEMAIL.COM
+ zonetransfer.me.               MX     20   ASPMX4.GOOGLEMAIL.COM
+ zonetransfer.me.               MX     20   ASPMX5.GOOGLEMAIL.COM
+ zonetransfer.me.               A      5.196.105.14
+ zonetransfer.me.               NS     nsztm1.digi.ninja             
+ zonetransfer.me.               NS     nsztm2.digi.ninja             
+ zonetransfer.me.               HINFO  Casio fx-700G  Windows XP
+ _acme-challenge                TXT   		"6Oa05hbUJ9xSsvYy7pApQvwCUSSGgxvrbdizjePEsZI"
+
+ _sip._tcp                      SRV    priority=0, weight=0, port=5060, www.zonetransfer.me
+ 14.105.196.5.IN-ADDR.ARPA      PTR    www.zonetransfer.me           
+ asfdbauthdns                   AFSDB  1    asfdbbox.zonetransfer.me
+ asfdbbox                       A      127.0.0.1
+ asfdbvolume                    AFSDB  1    asfdbbox.zonetransfer.me
+ canberra-office                A      202.14.81.230
+ cmdexec                        TXT   		"; ls"
+
+ contact                        TXT   		"Remember to call or email Pippa on +44 123 4567890 or pippa@zonetransfer.me when making DNS changes"
+
+ dc-office                      A      143.228.181.132
+ deadbeef                       AAAA   dead:beaf::
+ dr                             29    
+ DZC                            TXT   		"AbCdEfG"
+
+ email                          35    
+ email                          A      74.125.206.26
+ Hello                          TXT   		"Hi to Josh and all his class"
+
+ home                           A      127.0.0.1
+ Info                           TXT   		"ZoneTransfer.me service provided by Robin Wood - robin@digi.ninja. See http://digi.ninja/projects/zonetransferme.php for more information."
+
+ internal                       NS     intns1.zonetransfer.me        
+ internal                       NS     intns2.zonetransfer.me        
+ intns1                         A      81.4.108.41
+ intns2                         A      167.88.42.94
+ office                         A      4.23.39.254
+ ipv6actnow.org                 AAAA   2001:67c:2e8:11::c100:1332
+ owa                            A      207.46.197.32
+ robinwood                      TXT   		"Robin Wood"
+
+ rp                             RP     robin.zonetransfer.me  robinwood.zonetransfer.me
+ sip                            35    
+ sqli                           TXT   		"' or 1=1 --"
+
+ sshock                         TXT   		"() { :]}; echo ShellShocked"
+
+ staging                        CNAME  www.sydneyoperahouse.com
+ alltcpportsopen.firewall.test  A      127.0.0.1
+ testing                        CNAME  www.zonetransfer.me
+ vpn                            A      174.36.59.154
+ www                            A      5.196.105.14
+ xss                            TXT   		"'><script>alert('Boo')</script>"
+
+ zonetransfer.me.               SOA    nsztm1.digi.ninja robin.digi.ninja. (2019100801 172800 900 1209600 3600)
+> exit
+[SUCCESS] [2024-11-17 20:16:59] 
+Zone Transfer Summary:
+==================================================
+Domain: zonetransfer.me
+Total DNS Servers: 1
+Successful Transfers: 1
+Failed Transfers: 0
+
+════════════════════════════════════════════════════════════════════════════════
+══════════════════════════════════════════════════END══════════════════════════════════════════════════
+
+══════════════════════════════════════════════════START══════════════════════════════════════════════════
+Log started on 2024-11-17 20:21:27.927302
+
+════════════════════════════════════════════════════════════════════════════════
+Starting Zone Transfer: zonetransfer.me from nsztm1.digi.ninja
+────────────────────────────────────────────────────────────────────────────────
+[DEBUG] [2024-11-17 20:21:27] Executing nslookup commands:
+server nsztm1.digi.ninja
+set q=AXFR
+set type=any
+set class=any
+ls -d zonetransfer.me
+exit
+[INFO] [2024-11-17 20:21:27] Default Server:  UnKnown
+Address:  11.22.5.129
+
+> Default Server:  nsztm1.digi.ninja
+Address:  81.4.108.41
+
+> > > > [nsztm1.digi.ninja]
+ zonetransfer.me.               SOA    nsztm1.digi.ninja robin.digi.ninja. (2019100801 172800 900 1209600 3600)
+ zonetransfer.me.               TXT   		"google-site-verification=tyP28J7JAUHA9fw2sHXMgcCC0I6XBmmoVi04VlMewxA"
+
+ zonetransfer.me.               MX     0    ASPMX.L.GOOGLE.COM
+ zonetransfer.me.               MX     10   ALT1.ASPMX.L.GOOGLE.COM
+ zonetransfer.me.               MX     10   ALT2.ASPMX.L.GOOGLE.COM
+ zonetransfer.me.               MX     20   ASPMX2.GOOGLEMAIL.COM
+ zonetransfer.me.               MX     20   ASPMX3.GOOGLEMAIL.COM
+ zonetransfer.me.               MX     20   ASPMX4.GOOGLEMAIL.COM
+ zonetransfer.me.               MX     20   ASPMX5.GOOGLEMAIL.COM
+ zonetransfer.me.               A      5.196.105.14
+ zonetransfer.me.               NS     nsztm1.digi.ninja             
+ zonetransfer.me.               NS     nsztm2.digi.ninja             
+ zonetransfer.me.               HINFO  Casio fx-700G  Windows XP
+ _acme-challenge                TXT   		"6Oa05hbUJ9xSsvYy7pApQvwCUSSGgxvrbdizjePEsZI"
+
+ _sip._tcp                      SRV    priority=0, weight=0, port=5060, www.zonetransfer.me
+ 14.105.196.5.IN-ADDR.ARPA      PTR    www.zonetransfer.me           
+ asfdbauthdns                   AFSDB  1    asfdbbox.zonetransfer.me
+ asfdbbox                       A      127.0.0.1
+ asfdbvolume                    AFSDB  1    asfdbbox.zonetransfer.me
+ canberra-office                A      202.14.81.230
+ cmdexec                        TXT   		"; ls"
+
+ contact                        TXT   		"Remember to call or email Pippa on +44 123 4567890 or pippa@zonetransfer.me when making DNS changes"
+
+ dc-office                      A      143.228.181.132
+ deadbeef                       AAAA   dead:beaf::
+ dr                             29    
+ DZC                            TXT   		"AbCdEfG"
+
+ email                          35    
+ email                          A      74.125.206.26
+ Hello                          TXT   		"Hi to Josh and all his class"
+
+ home                           A      127.0.0.1
+ Info                           TXT   		"ZoneTransfer.me service provided by Robin Wood - robin@digi.ninja. See http://digi.ninja/projects/zonetransferme.php for more information."
+
+ internal                       NS     intns1.zonetransfer.me        
+ internal                       NS     intns2.zonetransfer.me        
+ intns1                         A      81.4.108.41
+ intns2                         A      167.88.42.94
+ office                         A      4.23.39.254
+ ipv6actnow.org                 AAAA   2001:67c:2e8:11::c100:1332
+ owa                            A      207.46.197.32
+ robinwood                      TXT   		"Robin Wood"
+
+ rp                             RP     robin.zonetransfer.me  robinwood.zonetransfer.me
+ sip                            35    
+ sqli                           TXT   		"' or 1=1 --"
+
+ sshock                         TXT   		"() { :]}; echo ShellShocked"
+
+ staging                        CNAME  www.sydneyoperahouse.com
+ alltcpportsopen.firewall.test  A      127.0.0.1
+ testing                        CNAME  www.zonetransfer.me
+ vpn                            A      174.36.59.154
+ www                            A      5.196.105.14
+ xss                            TXT   		"'><script>alert('Boo')</script>"
+
+ zonetransfer.me.               SOA    nsztm1.digi.ninja robin.digi.ninja. (2019100801 172800 900 1209600 3600)
+> exit
+[SUCCESS] [2024-11-17 20:21:27] 
+Zone Transfer Summary:
+==================================================
+Domain: zonetransfer.me
+Total DNS Servers: 1
+Successful Transfers: 1
+Failed Transfers: 0
+
+════════════════════════════════════════════════════════════════════════════════
+══════════════════════════════════════════════════END══════════════════════════════════════════════════
+
+══════════════════════════════════════════════════START══════════════════════════════════════════════════
+Log started on 2024-11-17 20:23:32.826911
+
+════════════════════════════════════════════════════════════════════════════════
+Starting Zone Transfer: zonetransfer.me from nsztm1.digi.ninja
+────────────────────────────────────────────────────────────────────────────────
+[DEBUG] [2024-11-17 20:23:32] Executing nslookup commands:
+server nsztm1.digi.ninja
+set q=AXFR
+set type=any
+set class=any
+ls -d zonetransfer.me
+exit
+[INFO] [2024-11-17 20:23:32] Default Server:  UnKnown
+Address:  11.22.5.129
+
+> Default Server:  nsztm1.digi.ninja
+Address:  81.4.108.41
+
+> > > > [nsztm1.digi.ninja]
+ zonetransfer.me.               SOA    nsztm1.digi.ninja robin.digi.ninja. (2019100801 172800 900 1209600 3600)
+ zonetransfer.me.               TXT   		"google-site-verification=tyP28J7JAUHA9fw2sHXMgcCC0I6XBmmoVi04VlMewxA"
+
+ zonetransfer.me.               MX     0    ASPMX.L.GOOGLE.COM
+ zonetransfer.me.               MX     10   ALT1.ASPMX.L.GOOGLE.COM
+ zonetransfer.me.               MX     10   ALT2.ASPMX.L.GOOGLE.COM
+ zonetransfer.me.               MX     20   ASPMX2.GOOGLEMAIL.COM
+ zonetransfer.me.               MX     20   ASPMX3.GOOGLEMAIL.COM
+ zonetransfer.me.               MX     20   ASPMX4.GOOGLEMAIL.COM
+ zonetransfer.me.               MX     20   ASPMX5.GOOGLEMAIL.COM
+ zonetransfer.me.               A      5.196.105.14
+ zonetransfer.me.               NS     nsztm1.digi.ninja             
+ zonetransfer.me.               NS     nsztm2.digi.ninja             
+ zonetransfer.me.               HINFO  Casio fx-700G  Windows XP
+ _acme-challenge                TXT   		"6Oa05hbUJ9xSsvYy7pApQvwCUSSGgxvrbdizjePEsZI"
+
+ _sip._tcp                      SRV    priority=0, weight=0, port=5060, www.zonetransfer.me
+ 14.105.196.5.IN-ADDR.ARPA      PTR    www.zonetransfer.me           
+ asfdbauthdns                   AFSDB  1    asfdbbox.zonetransfer.me
+ asfdbbox                       A      127.0.0.1
+ asfdbvolume                    AFSDB  1    asfdbbox.zonetransfer.me
+ canberra-office                A      202.14.81.230
+ cmdexec                        TXT   		"; ls"
+
+ contact                        TXT   		"Remember to call or email Pippa on +44 123 4567890 or pippa@zonetransfer.me when making DNS changes"
+
+ dc-office                      A      143.228.181.132
+ deadbeef                       AAAA   dead:beaf::
+ dr                             29    
+ DZC                            TXT   		"AbCdEfG"
+
+ email                          35    
+ email                          A      74.125.206.26
+ Hello                          TXT   		"Hi to Josh and all his class"
+
+ home                           A      127.0.0.1
+ Info                           TXT   		"ZoneTransfer.me service provided by Robin Wood - robin@digi.ninja. See http://digi.ninja/projects/zonetransferme.php for more information."
+
+ internal                       NS     intns1.zonetransfer.me        
+ internal                       NS     intns2.zonetransfer.me        
+ intns1                         A      81.4.108.41
+ intns2                         A      167.88.42.94
+ office                         A      4.23.39.254
+ ipv6actnow.org                 AAAA   2001:67c:2e8:11::c100:1332
+ owa                            A      207.46.197.32
+ robinwood                      TXT   		"Robin Wood"
+
+ rp                             RP     robin.zonetransfer.me  robinwood.zonetransfer.me
+ sip                            35    
+ sqli                           TXT   		"' or 1=1 --"
+
+ sshock                         TXT   		"() { :]}; echo ShellShocked"
+
+ staging                        CNAME  www.sydneyoperahouse.com
+ alltcpportsopen.firewall.test  A      127.0.0.1
+ testing                        CNAME  www.zonetransfer.me
+ vpn                            A      174.36.59.154
+ www                            A      5.196.105.14
+ xss                            TXT   		"'><script>alert('Boo')</script>"
+
+ zonetransfer.me.               SOA    nsztm1.digi.ninja robin.digi.ninja. (2019100801 172800 900 1209600 3600)
+> exit
+[SUCCESS] [2024-11-17 20:23:32] 
+Zone Transfer Summary:
+==================================================
+Domain: zonetransfer.me
+Total DNS Servers: 1
+Successful Transfers: 1
+Failed Transfers: 0
+
+══════════════════════════════════════════════════END══════════════════════════════════════════════════
+
+══════════════════════════════════════════════════START══════════════════════════════════════════════════
+Log started on 2024-11-17 20:27:06.696095
+
+════════════════════════════════════════════════════════════════════════════════
+Starting Zone Transfer: zonetransfer.me from nsztm1.digi.ninja
+────────────────────────────────────────────────────────────────────────────────
+[DEBUG] [2024-11-17 20:27:06] Executing nslookup commands:
+server nsztm1.digi.ninja
+set q=AXFR
+set type=any
+set class=any
+ls -d zonetransfer.me
+exit
+[INFO] [2024-11-17 20:27:06] Default Server:  UnKnown
+Address:  11.22.5.129
+
+> Default Server:  nsztm1.digi.ninja
+Address:  81.4.108.41
+
+> > > > [nsztm1.digi.ninja]
+ zonetransfer.me.               SOA    nsztm1.digi.ninja robin.digi.ninja. (2019100801 172800 900 1209600 3600)
+ zonetransfer.me.               TXT   		"google-site-verification=tyP28J7JAUHA9fw2sHXMgcCC0I6XBmmoVi04VlMewxA"
+
+ zonetransfer.me.               MX     0    ASPMX.L.GOOGLE.COM
+ zonetransfer.me.               MX     10   ALT1.ASPMX.L.GOOGLE.COM
+ zonetransfer.me.               MX     10   ALT2.ASPMX.L.GOOGLE.COM
+ zonetransfer.me.               MX     20   ASPMX2.GOOGLEMAIL.COM
+ zonetransfer.me.               MX     20   ASPMX3.GOOGLEMAIL.COM
+ zonetransfer.me.               MX     20   ASPMX4.GOOGLEMAIL.COM
+ zonetransfer.me.               MX     20   ASPMX5.GOOGLEMAIL.COM
+ zonetransfer.me.               A      5.196.105.14
+ zonetransfer.me.               NS     nsztm1.digi.ninja             
+ zonetransfer.me.               NS     nsztm2.digi.ninja             
+ zonetransfer.me.               HINFO  Casio fx-700G  Windows XP
+ _acme-challenge                TXT   		"6Oa05hbUJ9xSsvYy7pApQvwCUSSGgxvrbdizjePEsZI"
+
+ _sip._tcp                      SRV    priority=0, weight=0, port=5060, www.zonetransfer.me
+ 14.105.196.5.IN-ADDR.ARPA      PTR    www.zonetransfer.me           
+ asfdbauthdns                   AFSDB  1    asfdbbox.zonetransfer.me
+ asfdbbox                       A      127.0.0.1
+ asfdbvolume                    AFSDB  1    asfdbbox.zonetransfer.me
+ canberra-office                A      202.14.81.230
+ cmdexec                        TXT   		"; ls"
+
+ contact                        TXT   		"Remember to call or email Pippa on +44 123 4567890 or pippa@zonetransfer.me when making DNS changes"
+
+ dc-office                      A      143.228.181.132
+ deadbeef                       AAAA   dead:beaf::
+ dr                             29    
+ DZC                            TXT   		"AbCdEfG"
+
+ email                          35    
+ email                          A      74.125.206.26
+ Hello                          TXT   		"Hi to Josh and all his class"
+
+ home                           A      127.0.0.1
+ Info                           TXT   		"ZoneTransfer.me service provided by Robin Wood - robin@digi.ninja. See http://digi.ninja/projects/zonetransferme.php for more information."
+
+ internal                       NS     intns1.zonetransfer.me        
+ internal                       NS     intns2.zonetransfer.me        
+ intns1                         A      81.4.108.41
+ intns2                         A      167.88.42.94
+ office                         A      4.23.39.254
+ ipv6actnow.org                 AAAA   2001:67c:2e8:11::c100:1332
+ owa                            A      207.46.197.32
+ robinwood                      TXT   		"Robin Wood"
+
+ rp                             RP     robin.zonetransfer.me  robinwood.zonetransfer.me
+ sip                            35    
+ sqli                           TXT   		"' or 1=1 --"
+
+ sshock                         TXT   		"() { :]}; echo ShellShocked"
+
+ staging                        CNAME  www.sydneyoperahouse.com
+ alltcpportsopen.firewall.test  A      127.0.0.1
+ testing                        CNAME  www.zonetransfer.me
+ vpn                            A      174.36.59.154
+ www                            A      5.196.105.14
+ xss                            TXT   		"'><script>alert('Boo')</script>"
+
+ zonetransfer.me.               SOA    nsztm1.digi.ninja robin.digi.ninja. (2019100801 172800 900 1209600 3600)
+> exit
+[SUCCESS] [2024-11-17 20:27:06] 
+Zone Transfer Summary:
+==================================================
+Domain: zonetransfer.me
+Total DNS Servers: 1
+Successful Transfers: 1
+Failed Transfers: 0
+
+══════════════════════════════════════════════════END══════════════════════════════════════════════════
+
+Log started on 2024-11-19 16:18:11.849623
+════════════════════════════════════════════════════════════════════════════════
+Starting Zone Transfer: zonetransfer.me from nsztm1.digi.ninja
+────────────────────────────────────────────────────────────────────────────────
+[DEBUG] [2024-11-19 16:18:11] Executing nslookup commands:
+server nsztm1.digi.ninja
+set q=AXFR
+set type=any
+set class=any
+ls -d zonetransfer.me
+exit
+[INFO] [2024-11-19 16:18:11] Default Server:  my.router
+Address:  192.168.0.1
+
+> Default Server:  nsztm1.digi.ninja
+Address:  81.4.108.41
+
+> > > > [nsztm1.digi.ninja]
+ zonetransfer.me.               SOA    nsztm1.digi.ninja robin.digi.ninja. (2019100801 172800 900 1209600 3600)
+ zonetransfer.me.               TXT   		"google-site-verification=tyP28J7JAUHA9fw2sHXMgcCC0I6XBmmoVi04VlMewxA"
+
+ zonetransfer.me.               MX     0    ASPMX.L.GOOGLE.COM
+ zonetransfer.me.               MX     10   ALT1.ASPMX.L.GOOGLE.COM
+ zonetransfer.me.               MX     10   ALT2.ASPMX.L.GOOGLE.COM
+ zonetransfer.me.               MX     20   ASPMX2.GOOGLEMAIL.COM
+ zonetransfer.me.               MX     20   ASPMX3.GOOGLEMAIL.COM
+ zonetransfer.me.               MX     20   ASPMX4.GOOGLEMAIL.COM
+ zonetransfer.me.               MX     20   ASPMX5.GOOGLEMAIL.COM
+ zonetransfer.me.               A      5.196.105.14
+ zonetransfer.me.               NS     nsztm1.digi.ninja             
+ zonetransfer.me.               NS     nsztm2.digi.ninja             
+ zonetransfer.me.               HINFO  Casio fx-700G  Windows XP
+ _acme-challenge                TXT   		"6Oa05hbUJ9xSsvYy7pApQvwCUSSGgxvrbdizjePEsZI"
+
+ _sip._tcp                      SRV    priority=0, weight=0, port=5060, www.zonetransfer.me
+ 14.105.196.5.IN-ADDR.ARPA      PTR    www.zonetransfer.me           
+ asfdbauthdns                   AFSDB  1    asfdbbox.zonetransfer.me
+ asfdbbox                       A      127.0.0.1
+ asfdbvolume                    AFSDB  1    asfdbbox.zonetransfer.me
+ canberra-office                A      202.14.81.230
+ cmdexec                        TXT   		"; ls"
+
+ contact                        TXT   		"Remember to call or email Pippa on +44 123 4567890 or pippa@zonetransfer.me when making DNS changes"
+
+ dc-office                      A      143.228.181.132
+ deadbeef                       AAAA   dead:beaf::
+ dr                             29    
+ DZC                            TXT   		"AbCdEfG"
+
+ email                          35    
+ email                          A      74.125.206.26
+ Hello                          TXT   		"Hi to Josh and all his class"
+
+ home                           A      127.0.0.1
+ Info                           TXT   		"ZoneTransfer.me service provided by Robin Wood - robin@digi.ninja. See http://digi.ninja/projects/zonetransferme.php for more information."
+
+ internal                       NS     intns1.zonetransfer.me        
+ internal                       NS     intns2.zonetransfer.me        
+ intns1                         A      81.4.108.41
+ intns2                         A      167.88.42.94
+ office                         A      4.23.39.254
+ ipv6actnow.org                 AAAA   2001:67c:2e8:11::c100:1332
+ owa                            A      207.46.197.32
+ robinwood                      TXT   		"Robin Wood"
+
+ rp                             RP     robin.zonetransfer.me  robinwood.zonetransfer.me
+ sip                            35    
+ sqli                           TXT   		"' or 1=1 --"
+
+ sshock                         TXT   		"() { :]}; echo ShellShocked"
+
+ staging                        CNAME  www.sydneyoperahouse.com
+ alltcpportsopen.firewall.test  A      127.0.0.1
+ testing                        CNAME  www.zonetransfer.me
+ vpn                            A      174.36.59.154
+ www                            A      5.196.105.14
+ xss                            TXT   		"'><script>alert('Boo')</script>"
+
+ zonetransfer.me.               SOA    nsztm1.digi.ninja robin.digi.ninja. (2019100801 172800 900 1209600 3600)
+> exit
+[SUCCESS] [2024-11-19 16:18:11] 
+Zone Transfer Summary:
+==================================================
+Domain: zonetransfer.me
+Total DNS Servers: 1
+Successful Transfers: 1
+Failed Transfers: 0
+

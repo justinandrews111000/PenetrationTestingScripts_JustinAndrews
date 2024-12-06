@@ -1,0 +1,40 @@
+
+Log started on 2024-12-03 04:19:05.553318
+════════════════════════════════════════════════════════════════════════════════
+Starting Subdomain Enumeration
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-12-03 03:50:58] Loaded 4989 subdomains from wordlist
+[INFO] [2024-12-03 03:50:58] Starting enumeration of 4989 subdomains using 10 threads
+[SUCCESS] [2024-12-03 03:50:58] Found: http://ftp.testfire.net/ [200]
+[SUCCESS] [2024-12-03 03:50:58] Found: http://localhost.testfire.net/ [200]
+[SUCCESS] [2024-12-03 03:50:58] Found: http://www.testfire.net/ [200]
+[SUCCESS] [2024-12-03 03:51:09] Found: http://demo.testfire.net/ [200]
+[SUCCESS] [2024-12-03 03:54:15] Found: http://demo2.testfire.net/ [200]
+[SUCCESS] [2024-12-03 04:19:05] 
+Subdomain Enumeration Results for testfire.net/
+[SUCCESS] [2024-12-03 04:19:05] ================================================================================
+[SUCCESS] [2024-12-03 04:19:05] Total Subdomains Tested: 4989
+[SUCCESS] [2024-12-03 04:19:05] Subdomains Found: 5
+[SUCCESS] [2024-12-03 04:19:05] Scan Duration: 1687.09 seconds
+[SUCCESS] [2024-12-03 04:19:05] Subdomains/Second: 2.96
+[SUCCESS] [2024-12-03 04:19:05] 
+Findings by Status Code:
+[SUCCESS] [2024-12-03 04:19:05] ------------------------------
+[SUCCESS] [2024-12-03 04:19:05] 
+Status Code 200 (5 found):
+[SUCCESS] [2024-12-03 04:19:05] --------------------------------------------------
+[SUCCESS] [2024-12-03 04:19:05] http://demo.testfire.net/
+  Title: Altoro Mutual
+  Server: Apache-Coyote/1.1 | Content-Type: text/html;charset=ISO-8859-1 | Response Time: 0.085s
+[SUCCESS] [2024-12-03 04:19:05] http://demo2.testfire.net/
+  Title: Altoro Mutual
+  Server: Apache-Coyote/1.1 | Content-Type: text/html;charset=ISO-8859-1 | Response Time: 0.071s
+[SUCCESS] [2024-12-03 04:19:05] http://ftp.testfire.net/
+  Title: Altoro Mutual
+  Server: Apache-Coyote/1.1 | Content-Type: text/html;charset=ISO-8859-1 | Response Time: 0.099s
+[SUCCESS] [2024-12-03 04:19:05] http://localhost.testfire.net/
+  Title: Altoro Mutual
+  Server: Apache-Coyote/1.1 | Content-Type: text/html;charset=ISO-8859-1 | Response Time: 0.104s
+[SUCCESS] [2024-12-03 04:19:05] http://www.testfire.net/
+  Title: Altoro Mutual
+  Server: Apache-Coyote/1.1 | Content-Type: text/html;charset=ISO-8859-1 | Response Time: 0.150s

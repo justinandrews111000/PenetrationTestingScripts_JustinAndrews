@@ -1,0 +1,75 @@
+
+Log started on 2024-12-02 09:20:19.732511
+════════════════════════════════════════════════════════════════════════════════
+Starting Network Topology Mapping: 11.22.5.0/24
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-12-02 09:11:59] Collecting 10 RTT samples per host...
+[INFO] [2024-12-02 09:20:19] 
+Network Topology Map
+==================================================
+
+Cluster 1 (Avg RTT: 1.92ms):
+----------------------------------------
+  11.22.5.1       [min=2.00ms, avg=2.30ms, max=3.00ms]
+  11.22.5.129     [min=1.00ms, avg=2.00ms, max=3.00ms]
+  11.22.5.193     [min=1.00ms, avg=1.90ms, max=2.00ms]
+  11.22.5.65      [min=1.00ms, avg=1.50ms, max=2.00ms]
+
+Cluster 2 (Avg RTT: 53.65ms):
+----------------------------------------
+  11.22.5.130     [min=3.00ms, avg=54.40ms, max=106.00ms]
+  11.22.5.131     [min=13.00ms, avg=52.90ms, max=103.00ms]
+
+[INFO] [2024-12-02 09:20:19] 
+RTT Network Distance Map (Based on ping latency)
+WARNING: This is an approximation based solely on RTT measurements
+and may not reflect actual network topology.
+======================================================================
+
+ 55ms    | #
+ 50ms    | [11.22.5.130: 54.4ms], [11.22.5.131: 52.9ms]
+ 45ms    | #
+ 40ms    | #
+ 35ms    | #
+ 30ms    | #
+ 25ms    | #
+ 20ms    | #
+ 15ms    | #
+ 10ms    | #
+  5ms    | #
+  0ms    | [11.22.5.1: 2.3ms], [11.22.5.129: 2.0ms], [11.22.5.193: 1.9ms], [11.22.5.65: 1.5ms]
+[INFO] [2024-12-05 15:33:58] Starting network mapping of 192.168.1.0/24
+[INFO] [2024-12-05 15:33:58] Found 254 hosts to scan
+[INFO] [2024-12-05 15:33:58] Collecting RTT samples (1/1)
+[INFO] [2024-12-05 15:34:23] 
+[INFO] [2024-12-05 15:34:23] Calculating RTT metrics
+[INFO] [2024-12-05 15:34:23] 
+[INFO] [2024-12-05 15:34:23] Clustering hosts
+[INFO] [2024-12-05 15:34:23] 
+[INFO] [2024-12-05 15:34:23] Network mapping completed
+[INFO] [2024-12-05 15:34:23] 
+[INFO] [2024-12-05 15:39:11] Starting network mapping of 192.168.1.0/24
+[INFO] [2024-12-05 15:39:11] Found 254 hosts to scan
+[INFO] [2024-12-05 15:39:11] Collecting RTT samples (1/1)
+[INFO] [2024-12-05 15:39:37] 
+[INFO] [2024-12-05 15:39:37] Calculating RTT metrics
+[INFO] [2024-12-05 15:39:37] 
+[INFO] [2024-12-05 15:39:37] Clustering hosts
+[INFO] [2024-12-05 15:39:37] 
+[INFO] [2024-12-05 15:39:37] Network mapping completed
+[INFO] [2024-12-05 15:39:37] 
+
+Log started on 2024-12-05 15:49:29.755491
+[INFO] [2024-12-05 15:49:03] Starting network mapping of 192.168.1.0/24
+[INFO] [2024-12-05 15:49:03] Found 254 hosts to scan
+[INFO] [2024-12-05 15:49:03] Collecting RTT samples (1/1)
+[INFO] [2024-12-05 15:49:29] Calculating RTT metrics
+[INFO] [2024-12-05 15:49:29] Clustering hosts
+[INFO] [2024-12-05 15:49:29] Network mapping completed
+
+Log started on 2024-12-05 15:50:34.744280
+════════════════════════════════════════════════════════════════════════════════
+Starting Network Topology Mapping: 192.168.1.0/24
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-12-05 15:50:08] Collecting 1 RTT samples per host...
+[WARNING] [2024-12-05 15:50:34] No responsive hosts found

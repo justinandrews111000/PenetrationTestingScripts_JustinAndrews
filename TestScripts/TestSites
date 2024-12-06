@@ -1,0 +1,18 @@
+Pentesting Test Sites:
+    https://www.wechall.net/active_sites
+
+DNS Zone Trasfer:
+    https://digi.ninja/
+        https://digi.ninja/projects/zonetransferme.php
+
+SQLi:
+    https://demo.testfire.net/
+        https://demo.testfire.net/login.jsp
+
+    http://redtiger.labs.overthewire.org/
+        http://redtiger.labs.overthewire.org/level1.php
+XSS:
+    https://xss-game.appspot.com/
+        https://xss-game.appspot.com/level1/frame
+    
+    https://demo.testfire.net/

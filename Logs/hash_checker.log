@@ -1,0 +1,15 @@
+
+Log started on 2024-11-19 16:59:08.544062
+[DEBUG] [2024-11-19 16:59:07] Loading password list from WordLists/10-million-password-list-top-100000/10-million-password-list-top-100000-and-hashes.txt
+[SUCCESS] [2024-11-19 16:59:07] Successfully loaded 100007 password hashes
+[DEBUG] [2024-11-19 16:59:07] Starting multithreaded hash check with 10 threads
+════════════════════════════════════════════════════════════════════════════════
+Starting Hash Check Results
+────────────────────────────────────────────────────────────────────────────────
+[SUCCESS] [2024-11-19 16:59:08] Target Hash: ab5f937d3254cc56c45c016c1fd3b0963e5a9032b95a600e56a8950e0919523a
+[SUCCESS] [2024-11-19 16:59:08] Found Password: boonedog
+[SUCCESS] [2024-11-19 16:59:08] Stored Hash: ab5f937d3254cc56c45c016c1fd3b0963e5a9032b95a600e56a8950e0919523a
+[SUCCESS] [2024-11-19 16:59:08] Time Elapsed: 1.34 seconds
+[SUCCESS] [2024-11-19 16:59:08] Threads Used: 10
+[SUCCESS] [2024-11-19 16:59:08] Status: MATCH FOUND
+════════════════════════════════════════════════════════════════════════════════
